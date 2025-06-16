@@ -55,7 +55,7 @@ export default function CardCarousel() {
       <Slider {...settings}>
         {cards.map((card, i) => (
           <div key={i} className="p-2">
-            <div className="position-relative border  rounded-4 overflow-hidden">
+            <div className="position-relative border rounded-4 overflow-hidden">
               <img
                 src={card.image}
                 alt=""

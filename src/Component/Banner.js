@@ -11,18 +11,18 @@ export default function Banner() {
 
       <div className="card-container">
         <div className="card-box border border1">
-          <div className="card-title">Flowers, Pens & Perfumes</div>
-          <img src="/photo1.avif" alt="Flowers" />
+          <div className="card-title">Flowers & Perfumes</div>
+          <img src="/biscuit.jpeg" alt="Flowers" />
         </div>
 
         <div className="card-box border border1">
           <div className="card-title">Gadgets & Lifestyle</div>
-          <img src="/perfume.webp" alt="Gadgets" />
+          <img src="/biscuit.jpeg" alt="Gadgets" />
         </div>
 
         <div className="card-box border border1">
           <div className="card-title">Chocolates & Cakes</div>
-          <img src="/watch.jpeg" alt="Chocolates" />
+          <img src="/biscuit.jpeg" alt="Chocolates" />
         </div>
       </div>
     </div>

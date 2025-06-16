@@ -43,16 +43,17 @@ const settings = {
 
 export default function CategorySlider() {
   return (
-    <div className="category-slider-wrapper px-2">
+    <div className="category-slider-wrapper px-2 sticky top-0">
       <Slider {...settings}>
         {categories.map((item, idx) => (
-          <div key={idx} className="text-center px-1">
+          <div key={idx} className="text-left ">
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
-                gap: "2px", // reduced space between icon and label
+                justifyContent:"center",
+                alignItems: "start",
+                gap: "1px", // reduced space between icon and label
               }}
             >
               {item.icon}
