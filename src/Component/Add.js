@@ -1,3 +1,4 @@
+// src/Add.js
 import React, { useState, useEffect } from "react";
 
 export default function Add() {
@@ -26,36 +27,11 @@ export default function Add() {
 
   const items = [
     { img: "/cow.jpeg", title: "Cow Milk", volume: "500ml", price: "₹30" },
-    {
-      img: "/ice.jpeg",
-      title: "Mother Dairy",
-      volume: "1 liter",
-      price: "₹50",
-    },
-    {
-      img: "/chocolate.png",
-      title: "Cold Coffee",
-      volume: "250ml",
-      price: "₹40",
-    },
-    {
-      img: "/namkin.jpeg",
-      title: "Organic Milk",
-      volume: "1 liter",
-      price: "₹60",
-    },
-    {
-      img: "/cake.jpeg",
-      title: "Flavored Milk",
-      volume: "500ml",
-      price: "₹35",
-    },
-    {
-      img: "/biscuit.jpeg",
-      title: "Low Fat Milk",
-      volume: "1 liter",
-      price: "₹45",
-    },
+    { img: "/ice.jpeg", title: "Mother Dairy", volume: "1 liter", price: "₹50" },
+    { img: "/chocolate.png", title: "Cold Coffee", volume: "250ml", price: "₹40" },
+    { img: "/namkin.jpeg", title: "Organic Milk", volume: "1 liter", price: "₹60" },
+    { img: "/cake.jpeg", title: "Flavored Milk", volume: "500ml", price: "₹35" },
+    { img: "/biscuit.jpeg", title: "Low Fat Milk", volume: "1 liter", price: "₹45" },
   ];
 
   return (
@@ -104,7 +80,7 @@ export default function Add() {
                   borderRadius: "8px",
                 }}
               />
-              <p className=" mb-1 text-truncate" style={{ fontSize: "15px" }}>
+              <p className="mb-1 text-truncate" style={{ fontSize: "15px" }}>
                 {item.title}
               </p>
               <p className="mb-1" style={{ fontSize: "15px" }}>
@@ -114,9 +90,12 @@ export default function Add() {
                 <span className="text-success fw-bold price-text">
                   {item.price}
                 </span>
-                <button className="btn btn-light btn-sm px-3 py-1 add-btn border border 1 border-success">
+                <a
+                  href="/details"
+                  className="btn btn-light btn-sm px-3 py-1 add-btn border border-1 border-success text-decoration-none"
+                >
                   ADD
-                </button>
+                </a>
               </div>
             </div>
           </div>

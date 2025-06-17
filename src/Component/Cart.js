@@ -28,7 +28,13 @@ export default function Cart() {
               <p className="text-dark m-0 small fs-4">
                 Your favourite person is now online
               </p>
-              <button className="btn btn-dark mt-5 px-4 py-2">Order Now</button>
+              
+               <a
+                  href="/open" // link to new page
+                  className="btn btn-dark mt-3"
+                >
+                  Order Now
+                </a>
             </div>
           </div>
         </div>

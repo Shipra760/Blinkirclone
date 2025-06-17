@@ -9,26 +9,31 @@ export default function CardCarousel() {
       image: "/vacation.jpeg",
       title: "Pharmacy at your Doorstep!",
       description: "Your favourite paan shop is now online",
+      link: "/order/1",
     },
     {
       image: "/cake.jpeg",
       title: "Fresh Medicines Delivered!",
       description: "Speedy and reliable pharmacy delivery",
+      link: "/order/2",
     },
     {
       image: "/ice.jpeg",
-      title: "Fresh Medicines Delivered!",
-      description: "Speedy and reliable pharmacy delivery",
+      title: "Cold Medicines Delivered!",
+      description: "Cold relief at your home",
+      link: "/order/3",
     },
     {
       image: "/cake.jpeg",
-      title: "Fresh Medicines Delivered!",
-      description: "Speedy and reliable pharmacy delivery",
+      title: "Healthy You, Fast Delivery",
+      description: "Top brands at best prices",
+      link: "/order/4",
     },
     {
       image: "/vacation.jpeg",
-      title: "Fresh Medicines Delivered!",
-      description: "Speedy and reliable pharmacy delivery",
+      title: "24x7 Medical Delivery",
+      description: "We are always open for you",
+      link: "/order/5",
     },
   ];
 
@@ -58,7 +63,7 @@ export default function CardCarousel() {
             <div className="position-relative border rounded-4 overflow-hidden">
               <img
                 src={card.image}
-                alt=""
+                alt={card.title}
                 className="img-fluid"
                 style={{ height: 250, width: "100%", objectFit: "cover" }}
               />
@@ -74,7 +79,13 @@ export default function CardCarousel() {
               >
                 <h4 className="fw-bold fs-5 mb-1">{card.title}</h4>
                 <small>{card.description}</small>
-                <button className="btn btn-dark mt-5">Order Now</button>
+                <br />
+                <a
+                  href="/open" // link to new page
+                  className="btn btn-dark mt-3"
+                >
+                  Order Now
+                </a>
               </div>
             </div>
           </div>

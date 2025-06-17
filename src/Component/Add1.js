@@ -114,9 +114,12 @@ export default function Add1() {
                 <span className="text-success fw-bold price-text">
                   {item.price}
                 </span>
-                <button className="btn btn-light btn-sm px-3 py-1 add-btn border border 1 border-success">
+                <a
+                  href="/details"
+                  className="btn btn-light btn-sm px-3 py-1 add-btn border border-1 border-success text-decoration-none"
+                >
                   ADD
-                </button>
+                </a>
               </div>
             </div>
           </div>
