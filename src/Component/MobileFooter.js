@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaHome, FaRedoAlt, FaThLarge, FaPrint } from "react-icons/fa";
 
-
 export default function MobileFooter() {
+  const [activeTab, setActiveTab] = useState("Home");
+
+  const tabs = [
+    { name: "Home", icon: <FaHome size={24} /> },
+    { name: "Order Again", icon: <FaRedoAlt size={24} /> },
+    { name: "Categories", icon: <FaThLarge size={24} /> },
+    { name: "Print", icon: <FaPrint size={24} /> },
+  ];
+
   return (
     <div
       className="mobile-footer-nav d-flex justify-content-around align-items-center shadow-sm border-top"
@@ -16,22 +24,22 @@ export default function MobileFooter() {
         zIndex: 1000,
       }}
     >
-      <div className="text-center">
-        <FaHome size={24} color="orange" />
-        <div className="small fw-bold">Home</div>
-      </div>
-      <div className="text-center">
-        <FaRedoAlt size={24} />
-        <div className="small">Order Again</div>
-      </div>
-      <div className="text-center">
-        <FaThLarge size={24} />
-        <div className="small">Categories</div>
-      </div>
-      <div className="text-center">
-        <FaPrint size={24} />
-        <div className="small">Print</div>
-      </div>
+      {tabs.map((tab) => (
+        <div
+          key={tab.name}
+          className="text-center"
+          style={{
+            fontSize: "6px",
+            color: activeTab === tab.name ? "#00a400" : "#333" ,
+            fontWeight: activeTab === tab.name ? "bold" : "normal",
+            cursor: "pointer",
+          }}
+          onClick={() => setActiveTab(tab.name)}
+        >
+          {tab.icon}
+          <div className="small">{tab.name}</div>
+        </div>
+      ))}
     </div>
   );
 }

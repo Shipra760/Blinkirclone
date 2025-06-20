@@ -4,7 +4,7 @@ import MobileFooter from "./MobileFooter";
 export default function Footer() {
   return (
     <div className="container mt-5 pt-4">
-      {/* Desktop Footer - Hidden on Mobile */}
+    
       <div className="d-none d-md-block">
         <div className="row">
           <div className="col-md-4 mb-4">
@@ -110,7 +110,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Mobile Footer Only - Hidden on Desktop */}
+    
       <div className="d-block d-md-none">
         <MobileFooter />
       </div>

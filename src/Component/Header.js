@@ -8,7 +8,7 @@ export default function Header() {
       className="w-100 border-bottom text-dark py-2"
       style={{ backgroundColor: "lightblue", position: "relative", zIndex: 1 }}
     >
-      {/* Mobile View */}
+   
       <div className="d-block d-md-none px-3">
         <div className="d-flex justify-content-between align-items-center mb-2">
           <div>
@@ -43,7 +43,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Desktop View */}
+      
       <div className="row align-items-center px-4 gx-3 d-none d-md-flex bg-white text-dark m-0">
         <div className="col-md-4 d-flex align-items-center">
           <img

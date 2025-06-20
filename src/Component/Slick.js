@@ -25,7 +25,7 @@ export default function Slick() {
         setImageSize(145);
       } else {
         setSlidesToShow(6);
-        setImageSize(160); // ✅ Fixed value for desktop
+        setImageSize(160); 
       }
     };
 

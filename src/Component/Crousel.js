@@ -12,13 +12,13 @@ export default function CardCarousel() {
       link: "/order/1",
     },
     {
-      image: "/cake.jpeg",
+      image: "/namkin.jpeg",
       title: "Fresh Medicines Delivered!",
       description: "Speedy and reliable pharmacy delivery",
       link: "/order/2",
     },
     {
-      image: "/ice.jpeg",
+      image: "/biscuit.jpeg",
       title: "Cold Medicines Delivered!",
       description: "Cold relief at your home",
       link: "/order/3",
@@ -30,7 +30,7 @@ export default function CardCarousel() {
       link: "/order/4",
     },
     {
-      image: "/vacation.jpeg",
+      image: "/meat.jpeg",
       title: "24x7 Medical Delivery",
       description: "We are always open for you",
       link: "/order/5",

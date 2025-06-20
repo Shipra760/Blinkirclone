@@ -30,7 +30,7 @@ export default function Cart() {
               </p>
               
                <a
-                  href="/open" // link to new page
+                  href="/open" 
                   className="btn btn-dark mt-3"
                 >
                   Order Now

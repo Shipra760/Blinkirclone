@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import products from "../data/productList"; 
 
-export default function Add1() {
+export default function Add() {
   const [cardSize, setCardSize] = useState({ height: 220, imageHeight: 100 });
 
   useEffect(() => {
@@ -25,38 +27,14 @@ export default function Add1() {
   }, []);
 
   const items = [
-    { img: "/cow.jpeg", title: "Cow Milk", volume: "500ml", price: "₹30" },
-    {
-      img: "/ice.jpeg",
-      title: "Mother Dairy",
-      volume: "1 liter",
-      price: "₹50",
-    },
-    {
-      img: "/chocolate.png",
-      title: "Cold Coffee",
-      volume: "250ml",
-      price: "₹40",
-    },
-    {
-      img: "/namkin.jpeg",
-      title: "Organic Milk",
-      volume: "1 liter",
-      price: "₹60",
-    },
-    {
-      img: "/cake.jpeg",
-      title: "Flavored Milk",
-      volume: "500ml",
-      price: "₹35",
-    },
-    {
-      img: "/biscuit.jpeg",
-      title: "Low Fat Milk",
-      volume: "1 liter",
-      price: "₹45",
-    },
-  ];
+  { id: 1, img: "/cow.jpeg", title: "Cow Milk", volume: "500ml", price: "₹30" },
+  { id: 2, img: "/ice.jpeg", title: "Mother Dairy", volume: "1 liter", price: "₹50" },
+  { id: 3, img: "/chocolate.png", title: "Cold Coffee", volume: "250ml", price: "₹40" },
+  { id: 4, img: "/namkin.jpeg", title: "Organic Milk", volume: "1 liter", price: "₹60" },
+  { id: 5, img: "/cake.jpeg", title: "Flavored Milk", volume: "500ml", price: "₹35" },
+  { id: 6, img: "/biscuit.jpeg", title: "Low Fat Milk", volume: "1 liter", price: "₹45" },
+];
+
 
   return (
     <div className="container mt-4">
@@ -79,7 +57,7 @@ export default function Add1() {
       `}</style>
 
       <h4 className="fw-bold" style={{ fontSize: "15px" }}>
-        Sneakerheads & shoe-lovers corner
+        Chocolate, Cake & Namkin
       </h4>
 
       <div className="row">
@@ -104,7 +82,7 @@ export default function Add1() {
                   borderRadius: "8px",
                 }}
               />
-              <p className=" mb-1 text-truncate" style={{ fontSize: "15px" }}>
+              <p className="mb-1 text-truncate" style={{ fontSize: "15px" }}>
                 {item.title}
               </p>
               <p className="mb-1" style={{ fontSize: "15px" }}>
@@ -114,12 +92,12 @@ export default function Add1() {
                 <span className="text-success fw-bold price-text">
                   {item.price}
                 </span>
-                <a
-                  href="/details"
+                <Link
+                  to={`/details/${item.id}`}
                   className="btn btn-light btn-sm px-3 py-1 add-btn border border-1 border-success text-decoration-none"
                 >
                   ADD
-                </a>
+                </Link>
               </div>
             </div>
           </div>

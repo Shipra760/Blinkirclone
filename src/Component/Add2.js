@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import products from "../data/productList"; 
 
-export default function Add() {
+import products1 from "../data/electronicList"
+
+export default function Add2() {
   const [cardSize, setCardSize] = useState({ height: 220, imageHeight: 100 });
 
   useEffect(() => {
@@ -27,12 +28,12 @@ export default function Add() {
   }, []);
 
   const items = [
-  { id: 1, img: "/cow.jpeg", title: "Cow Milk", volume: "500ml", price: "₹30" },
-  { id: 2, img: "/ice.jpeg", title: "Mother Dairy", volume: "1 liter", price: "₹50" },
-  { id: 3, img: "/chocolate.png", title: "Cold Coffee", volume: "250ml", price: "₹40" },
-  { id: 4, img: "/namkin.jpeg", title: "Organic Milk", volume: "1 liter", price: "₹60" },
-  { id: 5, img: "/cake.jpeg", title: "Flavored Milk", volume: "500ml", price: "₹35" },
-  { id: 6, img: "/biscuit.jpeg", title: "Low Fat Milk", volume: "1 liter", price: "₹45" },
+  { id: 1, img: "/elec1.jpeg", title: "Mobile", price: "₹300" },
+  { id: 2, img: "/elec2.jpeg", title: "MotherBoard",  price: "₹500" },
+  { id: 3, img: "/elec3.jpeg", title: "Speaker",  price: "₹400" },
+  { id: 4, img: "/elec4.jpeg", title: "EarPhone",  price: "₹600" },
+  { id: 5, img: "/elec5.jpeg", title: "Boofer",  price: "₹350" },
+  { id: 6, img: "/elec6.jpeg", title: "Speaker", price: "₹450" },
 ];
 
 
@@ -57,7 +58,7 @@ export default function Add() {
       `}</style>
 
       <h4 className="fw-bold" style={{ fontSize: "15px" }}>
-        Previously bought
+        Electronics Gadgets
       </h4>
 
       <div className="row">
@@ -74,15 +75,16 @@ export default function Add() {
               <img
                 src={item.img}
                 alt={item.title}
-                className="img-fluid mb-2"
+                className="img-fluid mb-2 "
                 style={{
                   height: `${cardSize.imageHeight}px`,
                   width: "100%",
                   objectFit: "cover",
                   borderRadius: "8px",
+                  backgroundColor:"lightblue",
                 }}
               />
-              <p className="mb-1 text-truncate" style={{ fontSize: "15px" }}>
+              <p className="mb-1 text-truncate p-1" style={{ fontSize: "15px" }}>
                 {item.title}
               </p>
               <p className="mb-1" style={{ fontSize: "15px" }}>
