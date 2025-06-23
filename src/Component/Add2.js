@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import products1 from "../data/electronicList"
-
 export default function Add2() {
   const [cardSize, setCardSize] = useState({ height: 220, imageHeight: 100 });
 
@@ -28,14 +26,13 @@ export default function Add2() {
   }, []);
 
   const items = [
-  { id: 1, img: "/elec1.jpeg", title: "Mobile", price: "₹300" },
-  { id: 2, img: "/elec2.jpeg", title: "MotherBoard",  price: "₹500" },
-  { id: 3, img: "/elec3.jpeg", title: "Speaker",  price: "₹400" },
-  { id: 4, img: "/elec4.jpeg", title: "EarPhone",  price: "₹600" },
-  { id: 5, img: "/elec5.jpeg", title: "Boofer",  price: "₹350" },
-  { id: 6, img: "/elec6.jpeg", title: "Speaker", price: "₹450" },
-];
-
+    { id: 1, img: "/elec1.jpeg", title: "Mobile", price: "₹300" },
+    { id: 2, img: "/elec2.jpeg", title: "MotherBoard", price: "₹500" },
+    { id: 3, img: "/elec3.jpeg", title: "Speaker", price: "₹400" },
+    { id: 4, img: "/elec4.jpeg", title: "EarPhone", price: "₹600" },
+    { id: 5, img: "/elec5.jpeg", title: "Boofer", price: "₹350" },
+    { id: 6, img: "/elec6.jpeg", title: "Speaker", price: "₹450" },
+  ];
 
   return (
     <div className="container mt-4">
@@ -81,10 +78,13 @@ export default function Add2() {
                   width: "100%",
                   objectFit: "cover",
                   borderRadius: "8px",
-                  backgroundColor:"lightblue",
+                  backgroundColor: "lightblue",
                 }}
               />
-              <p className="mb-1 text-truncate p-1" style={{ fontSize: "15px" }}>
+              <p
+                className="mb-1 text-truncate p-1"
+                style={{ fontSize: "15px" }}
+              >
                 {item.title}
               </p>
               <p className="mb-1" style={{ fontSize: "15px" }}>

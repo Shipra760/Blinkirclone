@@ -59,7 +59,7 @@ export default function Box2() {
                 className="img-fluid mb-1 box-img"
               />
               <div className="box-text">
-                <p className="mb-0">{item.title}</p>
+                <p className="mb-0 ">{item.title}</p>
                 <span>{item.subtitle}</span>
               </div>
             </div>

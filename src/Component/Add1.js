@@ -28,11 +28,11 @@ export default function Add() {
 
   const items = [
   { id: 1, img: "/cow.jpeg", title: "Cow Milk", volume: "500ml", price: "₹30" },
-  { id: 2, img: "/ice.jpeg", title: "Mother Dairy", volume: "1 liter", price: "₹50" },
-  { id: 3, img: "/chocolate.png", title: "Cold Coffee", volume: "250ml", price: "₹40" },
-  { id: 4, img: "/namkin.jpeg", title: "Organic Milk", volume: "1 liter", price: "₹60" },
-  { id: 5, img: "/cake.jpeg", title: "Flavored Milk", volume: "500ml", price: "₹35" },
-  { id: 6, img: "/biscuit.jpeg", title: "Low Fat Milk", volume: "1 liter", price: "₹45" },
+  { id: 2, img: "/ice.jpeg", title: "Ice Cream", volume: "1 piece", price: "₹50" },
+  { id: 3, img: "/chocolate.png", title: "Chocolate", volume: "250g", price: "₹40" },
+  { id: 4, img: "/namkin.jpeg", title: "Namkin", volume: "1 packet", price: "₹60" },
+  { id: 5, img: "/cake.jpeg", title: "Cake", volume: "1 piece", price: "₹350" },
+  { id: 6, img: "/biscuit.jpeg", title: "Biscuit", volume: "1 packet", price: "₹45" },
 ];
 
 

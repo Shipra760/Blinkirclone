@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
 import products1 from "../data/electronicList";
 
 export default function ElectronicDetails() {

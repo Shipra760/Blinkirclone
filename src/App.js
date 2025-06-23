@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Pages/Main";
 import ProductDetail from "./Pages/ProductDetail";
 import ElectronicDetail from "./Pages/ElectronicDetails";
-
 import CrouselOpen from "./Component/CrouselOpen";
 
 export default function App() {

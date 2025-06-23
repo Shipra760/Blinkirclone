@@ -11,18 +11,18 @@ export default function Banner() {
 
       <div className="card-container">
         <div className="card-box border border1">
-          <div className="card-title">Flowers & Perfumes</div>
+          <div className="card-title" style={{fontSize:"12px"}}>Choco Biscuit</div>
           <img src="/biscuit.jpeg" alt="Flowers" />
         </div>
 
         <div className="card-box border border1">
-          <div className="card-title">Gadgets & Lifestyle</div>
-          <img src="/biscuit.jpeg" alt="Gadgets" />
+          <div className="card-title" style={{fontSize:"12px"}}>Spicy Namkin</div>
+          <img src="/namkin.jpeg" alt="Gadgets" />
         </div>
 
         <div className="card-box border border1">
-          <div className="card-title">Chocolates & Cakes</div>
-          <img src="/biscuit.jpeg" alt="Chocolates" />
+          <div className="card-title" style={{fontSize:"12px"}}>Cakes</div>
+          <img src="/cake.jpeg" alt="Chocolates" />
         </div>
       </div>
     </div>

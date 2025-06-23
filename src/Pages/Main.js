@@ -31,7 +31,6 @@ export default function Main() {
       <Add2 />
       <Box2 />
       <Footer />
-
     </>
   );
 }

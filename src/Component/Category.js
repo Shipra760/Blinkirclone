@@ -1,15 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import {
-  GiShoppingBag,
-  GiLipstick,
-  GiBabyBottle,
-} from "react-icons/gi";
+import { GiShoppingBag, GiLipstick, GiBabyBottle } from "react-icons/gi";
 import { MdHeadphones } from "react-icons/md";
 import { FaRegLightbulb } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 
 const categories = [
   { icon: <GiShoppingBag size={20} />, label: "All" },
@@ -53,24 +49,31 @@ export default function CategorySlider() {
   const renderContent = () => {
     switch (selectedCategory) {
       case "All":
-        return 
+        return;
       case "Electronics":
-        return 
+        return;
       case "Beauty":
-        return 
+        return;
       case "Decor":
-        return 
+        return;
       case "Kids":
-        return 
+        return;
       default:
-        return
+        return;
     }
   };
 
   return (
     <div className="">
-      <div className="category-slider-wrapper sticky  " style={{ paddingLeft: "0px" ,backgroundColor:"lightblue", marginLeft:"0px"}}>
-        <Slider {...settings}>
+      <div
+        className="category-slider-wrapper"
+        style={{
+          paddingLeft: "0px",
+          backgroundColor: "lightgreen",
+          marginLeft: "0px",
+        }}
+      >
+        {/* <Slider {...settings}>
           {categories.map((item, idx) => (
             <div key={idx} onClick={() => handleCategoryClick(item.label)}>
               <div
@@ -87,12 +90,49 @@ export default function CategorySlider() {
               </div>
             </div>
           ))}
+        </Slider> */}
+
+        <Slider {...settings}>
+          {categories.map(({ icon, label }, idx) =>
+            label === "All" ? (
+              <div key={idx} onClick={() => handleCategoryClick(label)}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    color: selectedCategory === label ? "#00a400" : "#333",
+                  }}
+                >
+                  {icon}
+                  <small style={{ fontSize: 11 }}>{label}</small>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={idx}
+                to={`/category/${label.toLowerCase()}`}
+                style={{ textDecoration: "none ", color: "#333" }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    color: selectedCategory === label ? "#00a400" : "#333",
+                  }}
+                >
+                  {icon}
+                  <small style={{ fontSize: 11 }}>{label}</small>
+                </div>
+              </Link>
+            )
+          )}
         </Slider>
       </div>
 
-      <div className="mt-3">
-        {renderContent()}
-      </div>
+      <div className="mt-3">{renderContent()}</div>
     </div>
   );
 }

@@ -1,18 +1,18 @@
 import React from "react";
 
 const items = [
-  { img: "/grocery.jpg", title: "Paan", subtitle: "Corner" },
-  { img: "/gro3.jpg", title: "Dairy,Bread", subtitle: "& egg" },
-  { img: "/cake.jpeg", title: "Fruit &", subtitle: "Vegetables" },
-  { img: "/cow.jpeg", title: "Cod Drinks", subtitle: "& Juices" },
-  { img: "/namkin.jpeg", title: "Breakfast &", subtitle: "Instant Food" },
-  { img: "/meat.jpeg", title: "Sweet", subtitle: "Tooth" },
-  { img: "/maggie.jpeg", title: "Bakery &", subtitle: "Biscuits" },
-  { img: "/shoefix.jpeg", title: "Tea,Coffee &", subtitle: "Health Drink" },
-  { img: "/biscuit.jpeg", title: "Atta, Rice", subtitle: "& Dal" },
-  { img: "/grocery.jpg", title: "Chocolate", subtitle: "Drink" },
-  { img: "/chocolate.png", title: "Atta, Rice", subtitle: "& Dal" },
-  { img: "/gro3.jpg", title: "Atta, Rice", subtitle: "& Dal" },
+  { img: "/grocery.jpg", title: "Dal,Oil", subtitle: "Rice" },
+  { img: "/gro3.jpg", title: "Masala,Bread", subtitle: "& egg" },
+  { img: "/cake.jpeg", title: "Delicious", subtitle: "Cake" },
+  { img: "/cow.jpeg", title: "Cow Milk", subtitle: "" },
+  { img: "/namkin.jpeg", title: "Spicy", subtitle: "Namkin" },
+  { img: "/meat.jpeg", title: "Chicken", subtitle: "Meat" },
+  { img: "/maggie.jpeg", title: "Maggie", subtitle: "Pasta" },
+  { img: "/shoefix.jpeg", title: "Shoefix", subtitle: "" },
+  { img: "/biscuit.jpeg", title: "Choco", subtitle: "Biscuit" },
+  { img: "/grocery.jpg", title: "Dal,Oil", subtitle: "Rice" },
+  { img: "/chocolate.png", title: "Choco", subtitle: "Chocolate" },
+  { img: "/gro3.jpg", title: "Masala", subtitle: "& Bread" },
 ];
 
 export default function Box() {

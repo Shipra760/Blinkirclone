@@ -7,32 +7,32 @@ export default function CardCarousel() {
   const cards = [
     {
       image: "/vacation.jpeg",
-      title: "Pharmacy at your Doorstep!",
-      description: "Your favourite paan shop is now online",
+      title: "Perfect time for making memories",
+      description: "Family time, laughter, and adventure",
       link: "/order/1",
     },
     {
       image: "/namkin.jpeg",
-      title: "Fresh Medicines Delivered!",
-      description: "Speedy and reliable pharmacy delivery",
+      title: "Crispy, crunchy, spicy Indian snack",
+      description: "Classic Indian munch anytime, anywhere",
       link: "/order/2",
     },
     {
       image: "/biscuit.jpeg",
-      title: "Cold Medicines Delivered!",
-      description: "Cold relief at your home",
+      title: "Sweet and crunchy biscuit delight",
+      description: "Crunchy snack for every mood",
       link: "/order/3",
     },
     {
       image: "/cake.jpeg",
-      title: "Healthy You, Fast Delivery",
-      description: "Top brands at best prices",
+      title: "Sweet treat for every celebration",
+      description: "Classic dessert for every occasion",
       link: "/order/4",
     },
     {
       image: "/meat.jpeg",
-      title: "24x7 Medical Delivery",
-      description: "We are always open for you",
+      title: "Tender, juicy, and flavorful meat",
+      description: "High-protein, fresh, and full-flavored",
       link: "/order/5",
     },
   ];
@@ -56,7 +56,7 @@ export default function CardCarousel() {
   };
 
   return (
-    <div className="container my-4">
+    <div className="container my-4 ">
       <Slider {...settings}>
         {cards.map((card, i) => (
           <div key={i} className="p-2">
@@ -68,7 +68,7 @@ export default function CardCarousel() {
                 style={{ height: 250, width: "100%", objectFit: "cover" }}
               />
               <div
-                className="position-absolute text-dark  bg-opacity-75"
+                className="position-absolute text-dark bg-opacity-75"
                 style={{
                   top: "15px",
                   left: "10px",
@@ -77,12 +77,12 @@ export default function CardCarousel() {
                   maxWidth: "85%",
                 }}
               >
-                <h4 className="fw-bold fs-5 mb-1">{card.title}</h4>
+                <h4 className="fw-bold fs-5 mb-1 text-dark">{card.title}</h4>
                 <small>{card.description}</small>
                 <br />
                 <a
-                  href="/open" // link to new page
-                  className="btn btn-dark mt-3"
+                  href="/open"
+                  className="btn btn-light mt-5 border border 1 border-success"
                 >
                   Order Now
                 </a>
