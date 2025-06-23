@@ -6,17 +6,18 @@ import "slick-carousel/slick/slick-theme.css";
 export default function CardCarousel() {
   const cards = [
     {
-      image: "/vacation.jpeg",
-      title: "Perfect time for making memories",
-      description: "Family time, laughter, and adventure",
-      link: "/order/1",
-    },
-    {
       image: "/namkin.jpeg",
       title: "Crispy, crunchy, spicy Indian snack",
       description: "Classic Indian munch anytime, anywhere",
       link: "/order/2",
     },
+    {
+      image: "/vacation.jpeg",
+      title: "Perfect time for making memories",
+      description: "Family time, laughter, and adventure",
+      link: "/order/1",
+    },
+    
     {
       image: "/biscuit.jpeg",
       title: "Sweet and crunchy biscuit delight",

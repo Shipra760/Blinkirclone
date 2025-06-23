@@ -1,20 +1,19 @@
 const items = [
-  { img: "/grocery.jpg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/gro3.jpg", title: "Masala,Bread", subtitle: "& egg" },
-  { img: "/cake.jpeg", title: "Delicious", subtitle: "Cake" },
-  { img: "/cow.jpeg", title: "Cow Milk", subtitle: "" },
-  { img: "/namkin.jpeg", title: "Spicy", subtitle: "Namkin" },
-  { img: "/meat.jpeg", title: "Chicken", subtitle: "Meat" },
-  { img: "/maggie.jpeg", title: "Maggie", subtitle: "Pasta" },
-  { img: "/shoefix.jpeg", title: "Shoefix", subtitle: "" },
-  { img: "/biscuit.jpeg", title: "Choco", subtitle: "Biscuit" },
-  { img: "/grocery.jpg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/chocolate.png", title: "Choco", subtitle: "Chocolate" },
-  { img: "/gro3.jpg", title: "Masala", subtitle: "& Bread" },
+  { img: "/decor1.jpeg", title: "Dal,Oil", subtitle: "Rice" },
+  { img: "/decor2.jpeg", title: "Masala,Bread", subtitle: "& egg" },
+  { img: "/decor3.jpeg", title: "Delicious", subtitle: "Cake" },
+  { img: "/decor4.jpeg", title: "Cow Milk", subtitle: "" },
+  { img: "/decor5.jpeg", title: "Spicy", subtitle: "Namkin" },
+  { img: "/decor6.jpeg", title: "Chicken", subtitle: "Meat" },
+  { img: "/decor1.jpeg", title: "Maggie", subtitle: "Pasta" },
+  { img: "/decor3.jpeg", title: "Shoefix", subtitle: "" },
+  { img: "/decor2.jpeg", title: "Choco", subtitle: "Biscuit" },
+  { img: "/decor5.jpeg", title: "Dal,Oil", subtitle: "Rice" },
+  { img: "/decor2.jpeg", title: "Choco", subtitle: "Chocolate" },
+  { img: "/decor6.jpeg", title: "Masala", subtitle: "& Bread" },
 ];
 
-
-export default function Box1() {
+export default function DecorBox() {
   return (
     <>
       <style>{`
@@ -42,7 +41,7 @@ export default function Box1() {
 
       <div className="container px-1 p-3">
         <h4 className="fw-bold ms-2 mt-2 " style={{ fontSize: "15px" }}>
-          Shop by store
+          Decor Section
         </h4>
 
         <div className="row gx-1 gy-2 text-center justify-content-start">

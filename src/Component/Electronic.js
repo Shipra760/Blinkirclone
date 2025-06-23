@@ -1,20 +1,19 @@
 const items = [
-  { img: "/grocery.jpg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/gro3.jpg", title: "Masala,Bread", subtitle: "& egg" },
-  { img: "/cake.jpeg", title: "Delicious", subtitle: "Cake" },
-  { img: "/cow.jpeg", title: "Cow Milk", subtitle: "" },
-  { img: "/namkin.jpeg", title: "Spicy", subtitle: "Namkin" },
-  { img: "/meat.jpeg", title: "Chicken", subtitle: "Meat" },
-  { img: "/maggie.jpeg", title: "Maggie", subtitle: "Pasta" },
-  { img: "/shoefix.jpeg", title: "Shoefix", subtitle: "" },
-  { img: "/biscuit.jpeg", title: "Choco", subtitle: "Biscuit" },
-  { img: "/grocery.jpg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/chocolate.png", title: "Choco", subtitle: "Chocolate" },
-  { img: "/gro3.jpg", title: "Masala", subtitle: "& Bread" },
+  { img: "/elec6.jpeg", title: "Mouse" },
+  { img: "/elec1.jpeg", title: "Key Pad", subtitle: "Mobile" },
+  { img: "/comp5.jpeg", title: "Mouse" },
+  { img: "/comp4.jpeg", title: "Cable" },
+  { img: "/comp3.jpeg", title: "Personal", subtitle: "Computer" },
+  { img: "/comp2.jpeg", title: "Mouse" },
+  { img: "/comp1.jpeg", title: "Data", subtitle: "Cable" },
+  { img: "/comp5.jpeg", title: "Mouse" },
+  { img: "/comp4.jpeg", title: "Wireless", subtitle: "Cable" },
+  { img: "/comp3.jpeg", title: "Personal", subtitle: "Computer" },
+  { img: "/comp1.jpeg", title: "Cable" },
+  { img: "/comp2.jpeg", title: "Mouse" },
 ];
 
-
-export default function Box1() {
+export default function Electronic() {
   return (
     <>
       <style>{`
@@ -39,10 +38,9 @@ export default function Box1() {
           line-height: 1.2;
         }
       `}</style>
-
       <div className="container px-1 p-3">
         <h4 className="fw-bold ms-2 mt-2 " style={{ fontSize: "15px" }}>
-          Shop by store
+          Computer Accessories
         </h4>
 
         <div className="row gx-1 gy-2 text-center justify-content-start">

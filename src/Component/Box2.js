@@ -1,5 +1,3 @@
-import React from "react";
-
 const items = [
   { img: "/perfume.webp", title: "Perfume"},
   { img: "/watch.jpeg", title: "Watch" },

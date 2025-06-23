@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <div
       className="w-100 border-bottom text-dark"
-      style={{ backgroundColor: "lightgreen", position: "relative", zIndex: 1 }}
+      style={{ backgroundColor: "lightyellow", position: "relative", zIndex: 1 }}
     >
       <div className="d-block d-md-none px-3">
         <div

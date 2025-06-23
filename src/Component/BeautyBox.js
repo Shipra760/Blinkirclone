@@ -1,20 +1,21 @@
+import React from "react";
+
 const items = [
-  { img: "/grocery.jpg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/gro3.jpg", title: "Masala,Bread", subtitle: "& egg" },
-  { img: "/cake.jpeg", title: "Delicious", subtitle: "Cake" },
-  { img: "/cow.jpeg", title: "Cow Milk", subtitle: "" },
-  { img: "/namkin.jpeg", title: "Spicy", subtitle: "Namkin" },
-  { img: "/meat.jpeg", title: "Chicken", subtitle: "Meat" },
-  { img: "/maggie.jpeg", title: "Maggie", subtitle: "Pasta" },
-  { img: "/shoefix.jpeg", title: "Shoefix", subtitle: "" },
-  { img: "/biscuit.jpeg", title: "Choco", subtitle: "Biscuit" },
-  { img: "/grocery.jpg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/chocolate.png", title: "Choco", subtitle: "Chocolate" },
-  { img: "/gro3.jpg", title: "Masala", subtitle: "& Bread" },
+  { img: "/lip.jpeg", title: "Lipstick", subtitle: "" },
+  { img: "/multy.jpeg", title: "Brush", subtitle: "" },
+  { img: "/loreal.jpeg", title: "Shampoo", subtitle: "" },
+  { img: "/powder.jpeg", title: "Compact ", subtitle: "Powder" },
+  { img: "/lipstick.jpeg", title: "Matted", subtitle: "Lipstick" },
+  { img: "/makeup.jpeg", title: "Makeup", subtitle: "" },
+  { img: "/perfume.webp", title: "Perfume", subtitle: "" },
+  { img: "/lip.jpeg", title: "Lipstick", subtitle: "" },
+  { img: "/loreal.jpeg", title: "Shampoo", subtitle: "" },
+  { img: "/makeup.jpeg", title: "Makeup", subtitle: "" },
+  { img: "/multy.jpeg", title: "Multy", subtitle: "" },
+  { img: "/brush.jpeg", title: "Brush", subtitle: "" },
 ];
 
-
-export default function Box1() {
+export default function BeautyBox() {
   return (
     <>
       <style>{`
@@ -42,7 +43,7 @@ export default function Box1() {
 
       <div className="container px-1 p-3">
         <h4 className="fw-bold ms-2 mt-2 " style={{ fontSize: "15px" }}>
-          Shop by store
+          Beauty Section
         </h4>
 
         <div className="row gx-1 gy-2 text-center justify-content-start">

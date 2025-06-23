@@ -2,7 +2,7 @@
   padding: 1rem 1rem;
   color: black;
   text-align: center;
-  background-color: lightgreen;
+  background-color: lightyellow;
 }
 
 .top-text h4 {
@@ -151,8 +151,15 @@ html,
   background: linear-gradient(to top, #a0469e, #f06ebe);
 }
 
-/* styles.css or your component CSS file */
-.no-underline {
+.category-link {
   text-decoration: none !important;
-  color: inherit;
+  color: #333333;
+}
+
+.category-link:visited {
+  text-decoration: none;
+}
+
+.category-link:hover {
+  text-decoration: none;
 }

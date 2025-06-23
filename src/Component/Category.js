@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import { Link, useLocation } from "react-router-dom";
 import { GiShoppingBag, GiLipstick, GiBabyBottle } from "react-icons/gi";
 import { MdHeadphones } from "react-icons/md";
 import { FaRegLightbulb } from "react-icons/fa";
@@ -24,115 +24,39 @@ const settings = {
   responsive: [
     {
       breakpoint: 768,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-      },
+      settings: { slidesToShow: 4, slidesToScroll: 4 },
     },
     {
       breakpoint: 480,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 5,
-      },
+      settings: { slidesToShow: 4, slidesToScroll: 4 },
     },
   ],
 };
 
-export default function CategorySlider() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const handleCategoryClick = (label) => {
-    setSelectedCategory(label);
-  };
-
-  const renderContent = () => {
-    switch (selectedCategory) {
-      case "All":
-        return;
-      case "Electronics":
-        return;
-      case "Beauty":
-        return;
-      case "Decor":
-        return;
-      case "Kids":
-        return;
-      default:
-        return;
-    }
-  };
+export default function Category() {
+  const location = useLocation();
+  const currentCategory = location.pathname.split("/").pop();
 
   return (
-    <div className="">
-      <div
-        className="category-slider-wrapper"
-        style={{
-          paddingLeft: "0px",
-          backgroundColor: "lightgreen",
-          marginLeft: "0px",
-        }}
-      >
-        {/* <Slider {...settings}>
-          {categories.map((item, idx) => (
-            <div key={idx} onClick={() => handleCategoryClick(item.label)}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  cursor: "pointer",
-                  color: selectedCategory === item.label ? "#00a400" : "#333",
-                }}
-              >
-                {item.icon}
-                <small style={{ fontSize: "11px" }}>{item.label}</small>
-              </div>
+    <div style={{ backgroundColor: "lightyellow", paddingLeft: 0 , height:"50px"}}>
+      <Slider {...settings}>
+        {categories.map(({ icon, label }, idx) => (
+          <Link
+            key={idx}
+            to={`/category/${label.toLowerCase()}`}
+            className="category-link"
+            style={{
+              textDecoration: "none",
+              color: currentCategory === label.toLowerCase() ? "#00a400" : "#333",
+            }}
+          >
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop:"7px" }}>
+              {icon}
+              <small style={{ fontSize: "11px" }}>{label}</small>
             </div>
-          ))}
-        </Slider> */}
-
-        <Slider {...settings}>
-          {categories.map(({ icon, label }, idx) =>
-            label === "All" ? (
-              <div key={idx} onClick={() => handleCategoryClick(label)}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    cursor: "pointer",
-                    color: selectedCategory === label ? "#00a400" : "#333",
-                  }}
-                >
-                  {icon}
-                  <small style={{ fontSize: 11 }}>{label}</small>
-                </div>
-              </div>
-            ) : (
-              <Link
-                key={idx}
-                to={`/category/${label.toLowerCase()}`}
-                style={{ textDecoration: "none ", color: "#333" }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    color: selectedCategory === label ? "#00a400" : "#333",
-                  }}
-                >
-                  {icon}
-                  <small style={{ fontSize: 11 }}>{label}</small>
-                </div>
-              </Link>
-            )
-          )}
-        </Slider>
-      </div>
-
-      <div className="mt-3">{renderContent()}</div>
+          </Link>
+        ))}
+      </Slider>
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default function MobileFooter() {
           key={tab.name}
           className="text-center"
           style={{
-            fontSize: "6px",
+            fontSize: "10px",
             color: activeTab === tab.name ? "#00a400" : "#333" ,
             fontWeight: activeTab === tab.name ? "bold" : "normal",
             cursor: "pointer",
