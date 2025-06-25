@@ -19,6 +19,10 @@ import Kid from "../Component/Kid";
 import KidBox from "../Component/KidBox";
 import DecorBox from "../Component/DecorBox";
 import Electronic from "../Component/Electronic";
+import TrendingCarousel from "../Component/TrendingCarousel";
+import ElectronicPara from "../Component/ElectronicPara"
+import BannerElectronic from "../Component/BannerElectronic"
+import BannerBeauty from "../Component/BannerBeauty";
 
 export default function Main() {
   return (
@@ -42,7 +46,11 @@ export default function Main() {
       <TwoBanner />
       <Decor />
       <Kid />
-      <KidBox />
+      <KidBox /> 
+      <TrendingCarousel />
+      <ElectronicPara />
+      <BannerElectronic />
+      <BannerBeauty />
       <Footer />
     </>
   );

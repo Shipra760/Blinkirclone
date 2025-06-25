@@ -4,6 +4,20 @@
   text-align: center;
   background-color: lightyellow;
 }
+.electronic-day-banner {
+  padding: 1rem 1rem;
+  color: black;
+  text-align: center;
+  background-color: lightpink;
+}
+
+.beauty-banner {
+  padding: 1rem 1rem;
+  color: black;
+  text-align: center;
+  background-color: rgb(150, 87, 150);
+}
+
 
 .top-text h4 {
   margin: 0;
@@ -162,4 +176,28 @@ html,
 
 .category-link:hover {
   text-decoration: none;
+}
+
+.category-box {
+  background: linear-gradient(145deg, #c084fc, #a855f7); /* light purple gradient */
+  border-radius: 16px;
+  color: white;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.category-image {
+  background-color: white;
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  padding: 6px;
 }

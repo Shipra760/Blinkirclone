@@ -38,16 +38,16 @@ export default function Electronic() {
           line-height: 1.2;
         }
       `}</style>
-      <div className="container px-1 p-3">
-        <h4 className="fw-bold ms-2 mt-2 " style={{ fontSize: "15px" }}>
+      <div className="container px-1">
+        <h4 className="fw-bold ms-1 p-2 " style={{ fontSize: "15px" }}>
           Computer Accessories
         </h4>
 
-        <div className="row gx-1 gy-2 text-center justify-content-start">
+        <div className="row gx-1  text-center justify-content-start">
           {items.map((item, index) => (
             <div
               key={index}
-              className="col-3 col-sm-2 col-md-1 p-1"
+              className="col-3 col-sm-2 col-md-1 "
               style={{ maxWidth: "100px" }}
             >
               <img

@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import products1 from "../data/electronicList";
+
 
 export default function ElectronicDetails() {
   const { id } = useParams();
-  const product = products1.find((item) => item.id === parseInt(id));
+  const product = product.find((item) => item.id === parseInt(id));
 
   if (!product) return <div className="container mt-4">Product not found</div>;
 

@@ -27,6 +27,16 @@ import KidCart from "../Component/KidCart";
 import DecorBox from "../Component/DecorBox";
 import BeautyBox from "../Component/BeautyBox";
 import Electronic from "../Component/Electronic";
+import Slick from "../Component/Slick";
+import SlickElectronic from "../Component/SlickElectronic";
+import SlickBeauty from "../Component/SlickBeauty";
+import TrendingCarousel from "../Component/TrendingCarousel";
+import ElectronicPara from "../Component/ElectronicPara";
+import BannerElectronic from "../Component/BannerElectronic"
+
+import BeautyCarousel from "../Component/BeautyCarousel";
+import BannerBeauty from "../Component/BannerBeauty";
+
 
 export default function CategoryPage() {
   const { categoryName } = useParams();
@@ -36,15 +46,16 @@ export default function CategoryPage() {
       <Banner />
       <Add />
       <Box />
+      <Slick />
       <Cart />
       <Add1 />
-      <Box1 />
       <Crousel />
       <Electronic />
       <Add2 />
       <Box2 />
       <Beauty />
       <Decor />
+      <Box1 />
       <TwoBanner />
       <Kid />
     </>
@@ -53,20 +64,21 @@ export default function CategoryPage() {
   const categoryContent = {
     electronics: (
       <div>
+        <BannerElectronic />
+        <SlickElectronic />
         <Add2 />
-        <Electronic />
-        <Crousel />
-        <Box2 />
-        <TwoBanner />
+        <TrendingCarousel />
+         <Electronic />
+         <ElectronicPara />
       </div>
     ),
     beauty: (
       <div>
+        <BannerBeauty />
         <Beauty />
-
-        <Crousel />
+        <SlickBeauty />
         <BeautyBox />
-        <TwoBanner />
+         <BeautyCarousel />
       </div>
     ),
     kids: (

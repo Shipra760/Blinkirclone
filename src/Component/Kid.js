@@ -1,105 +1,216 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
 
-export default function Kid() {
-  const [cardSize, setCardSize] = useState({ height: 220, imageHeight: 100 });
-
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      if (width <= 480) {
-        setCardSize({ height: 160, imageHeight: 70 });
-      } else if (width <= 576) {
-        setCardSize({ height: 180, imageHeight: 75 });
-      } else if (width <= 768) {
-        setCardSize({ height: 200, imageHeight: 90 });
-      } else if (width <= 992) {
-        setCardSize({ height: 210, imageHeight: 95 });
-      } else {
-        setCardSize({ height: 220, imageHeight: 100 });
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+export default function Add() {
   const items = [
-    { id: 1, img: "/kid1.jpeg", title: "I think, therefore I am", price: "₹300" },
-    { id: 2, img: "/kid2.jpeg", title: "To be, or not to be: that is the question", price: "₹500" },
-    { id: 3, img: "/kid3.jpeg", title: "Living the stylish life", price: "₹400" },
-    { id: 4, img: "/kid9.jpeg", title: "Spaces filled with joy", price: "₹600" },
-    { id: 5, img: "/kid5.jpeg", title: "Design dreams come alive", price: "₹350" },
-    { id: 6, img: "/kid8.jpeg", title: "I have a dream", price: "₹450" },
+    {
+      id: 25,
+      img: "/kid1.jpeg",
+      title: " Dreams Come True",
+      tags: ["Dreams Come True"],
+      rating: 4.5, 
+      time: "8 MINS",
+      price: 288,
+      mrp: 330,
+      discountPercent: 12,
+      perUnit: "₹7.20/unit",
+    },
+    {
+      id: 26,
+      img: "/kid2.jpeg",
+      title: "Elevating home",
+      tags: ["Elevating home "],
+      rating: 4.7,
+      time: "8 MINS",
+      price: 59,
+      mrp: 90,
+      discountPercent: 34,
+      perUnit: "₹81/100 g",
+    },
+    {
+      id: 27,
+      img: "/kid3.jpeg",
+      title: "Living the stylish life",
+      tags: ["Living the stylish life"],
+      rating: 4.4,
+      time: "8 MINS",
+      price: 81,
+      mrp: 95,
+      discountPercent: 14,
+      perUnit: "₹81/100 g",
+    },
+     {
+      id: 28,
+      img: "/kid4.jpeg",
+      title: "Spaces filled with joy",
+      tags: ["Spaces filled with joy"],
+      rating: 4.4,
+      time: "8 MINS",
+      price: 81,
+      mrp: 95,
+      discountPercent: 14,
+      perUnit: "₹81/100 g",
+    },
+     {
+      id: 29,
+      img: "/kid5.jpeg",
+      title: "Living the stylish life",
+      tags: ["Living the stylish life"],
+      rating: 4.4,
+      time: "8 MINS",
+      price: 81,
+      mrp: 95,
+      discountPercent: 14,
+      perUnit: "₹81/100 g",
+    },
+     {
+      id: 30,
+      img: "/kid6.jpeg",
+      title: "Game Edition",
+      tags: ["Game Edition"],
+      rating: 4.4,
+      time: "8 MINS",
+      price: 81,
+      mrp: 95,
+      discountPercent: 14,
+      perUnit: "₹81/100 g",
+    },
   ];
 
   return (
-    <div className="container mt-4">
-      <style>{`
-        @media (max-width: 576px) {
-          .product-card p {
-            font-size: 14px !important;
-            margin-bottom: 2px !important;
-          }
+    <div className="container px-2 mt-3">
+      <h6 className="fw-bold mb-3 px-1">Previously bought</h6>
 
-          .product-card .price-text {
-            font-size: 11px !important;
-          }
-
-          .product-card .add-btn {
-            font-size: 10px !important;
-            padding: 2px 6px !important;
-          }
-        }
-      `}</style>
-
-      <h4 className="fw-bold" style={{ fontSize: "15px" }}>
-        Toys, Drawing 
-      </h4>
-
-      <div className="row">
-        {items.map((item, index) => (
-          <div key={index} className="col-4 col-sm-4 col-md-3 col-lg-2 mb-3">
+      <div className="row gx-2">
+        {items.map((item) => (
+          <div key={item.id} className="col-4 mb-3">
             <div
-              className="product-card text-start d-flex flex-column justify-content-between"
+              className="d-flex flex-column justify-content-between"
               style={{
-                height: `${cardSize.height}px`,
                 backgroundColor: "#fff",
-                boxShadow: "0 0 8px rgba(0,0,0,0.05)",
+                borderRadius: "10px",
+                overflow: "hidden",
+                boxShadow: "0 0 6px rgba(0,0,0,0.05)",
+                height: "100%", // fills col height
+                minHeight: "240px", // make all cards same height
               }}
             >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="img-fluid mb-2 "
-                style={{
-                  height: `${cardSize.imageHeight}px`,
-                  width: "100%",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                  backgroundColor: "lightblue",
-                }}
-              />
-              <p
-                className="mb-1 text-truncate p-1"
-                style={{ fontSize: "15px" }}
-              >
-                {item.title}
-              </p>
-              <p className="mb-1" style={{ fontSize: "15px" }}>
-                {item.volume}
-              </p>
-              <div className="d-flex justify-content-between align-items-center px-1">
-                <span className="text-success fw-bold price-text">
-                  {item.price}
-                </span>
-                <Link
-                  to={`/details/${item.id}`}
-                  className="btn btn-light btn-sm px-3 py-1 add-btn border border-1 border-success text-decoration-none"
+              {/* Image */}
+              <div className="p-1">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="img-fluid"
+                  style={{
+                    borderRadius: "8px",
+                    objectFit: "cover",
+                    height: "90px",
+                    width: "100%",
+                  }}
+                />
+              </div>
+
+              {/* Product Info */}
+              <div className="px-2" style={{ fontSize: "11px" }}>
+                {/* Tags */}
+                <div
+  className="d-flex align-items-center mb-1"
+  style={{
+    height: "20px",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+  }}
+>
+  {item.tags.map((tag, i) => (
+    <span
+      key={i}
+      className="badge bg-light text-dark border me-1 "
+      style={{
+        fontSize: "10px",
+        padding: "2px 6px",
+        lineHeight: "normal",
+        flexShrink: 0,
+      }}
+    >
+      {tag}
+    </span>
+  ))}
+</div>
+
+
+                {/* Title */}
+                <div
+                  className="fw-medium mb-1"
+                  style={{
+                    fontSize: "11.5px",
+                    height: "32px",
+                    lineHeight: "1.2",
+                    overflow: "hidden",
+                  }}
                 >
-                  ADD
-                </Link>
+                  {item.title}
+                </div>
+
+                {/* Ratings & Time */}
+                <div
+                  className="d-flex align-items-center gap-1 mb-1 text-muted"
+                  style={{ fontSize: "10px" }}
+                >
+                  <span className="text-warning">
+                    <FaStar style={{ fontSize: "9px", marginRight: "2px" }} />
+                    {item.rating}
+                  </span>
+                  
+                  <span className="ms-auto">⏱ {item.time}</span>
+                </div>
+
+                {/* Discount */}
+                <div
+                  className="text-success mb-1 fw-semibold"
+                  style={{ fontSize: "10.5px" }}
+                >
+                  {item.discountPercent}% OFF
+                </div>
+
+                {/* Price + MRP */}
+                <div className="fw-bold" style={{ fontSize: "12px" }}>
+                  ₹{item.price}{" "}
+                  <span
+                    className="text-muted text-decoration-line-through fw-normal"
+                    style={{ fontSize: "10px" }}
+                  >
+                    ₹{item.mrp}
+                  </span>
+                </div>
+
+                {/* Per Unit */}
+                {item.perUnit && (
+                  <div
+                    className="text-secondary mb-1"
+                    style={{ fontSize: "10px" }}
+                  >
+                    {item.perUnit}
+                  </div>
+                )}
+              </div>
+
+              {/* ADD + See More (Bottom Aligned) */}
+              <div className="px-2 pb-2 mt-auto">
+                <div className="d-grid">
+                  <Link
+                    to={`/details/${item.id}`}
+                    className="btn btn-outline-success btn-sm fw-bold"
+                    style={{
+                      fontSize: "11px",
+                      borderRadius: "6px",
+                      padding: "2px 6px",
+                    }}
+                  >
+                    ADD
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

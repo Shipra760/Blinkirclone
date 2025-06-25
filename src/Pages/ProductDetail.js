@@ -1,75 +1,61 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import products from "../data/productList";
+import { FaStar } from "react-icons/fa";
+import allItems from "../data/productList"
+
 
 export default function ProductDetails() {
   const { id } = useParams();
-  const product = products.find((item) => item.id === parseInt(id));
+  const product = allItems.find((item) => item.id === parseInt(id));
 
-  if (!product) return <div className="container mt-4">Product not found</div>;
+  if (!product) return <div>Product not found.</div>;
 
   return (
-    <div className="container mt-4">
-      <div className="row g-4">
-        <div className="col-md-5 text-center ">
-          <img
-            src={product.img}
-            alt={product.title}
-            className="img-fluid rounded shadow m-1 "
-            style={{ height: "200px", objectFit: "contain" }}
-          />
+    <div className="container-fluid px-2" style={{ background: "#fff", minHeight: "100vh" }}>
+      {/* Product Image */}
+      <div className="text-center py-3" style={{ background: "#f9f4f2" }}>
+        <img
+          src={product.img}
+          alt={product.title}
+          style={{ maxHeight: "250px", width: "auto", objectFit: "contain" }}
+        />
+      </div>
+
+      {/* Product Info */}
+      <div className="px-2 py-3" style={{ fontSize: "14px" }}>
+        <div className="d-flex align-items-center text-muted mb-1" style={{ fontSize: "12px" }}>
+          <span>⏱ {product.deliveryTime}</span>
+          <span className="ms-auto text-warning">
+            <FaStar size={12} /> {product.rating} ({product.ratingCount})
+          </span>
         </div>
 
-        <div className="col-md-7">
-          <h4 className="fw-bold fs-5 text-center m-1">{product.title}</h4>
-          <p className="text-muted text-center m-1">{product.description}</p>
+        <h6 className="fw-bold">{product.title}</h6>
+        <p className="text-muted mb-1">{product.weight}</p>
 
-          {product.brand && (
-            <p className="text-center m-1">
-              <strong>Brand:</strong> {product.brand}
-            </p>
-          )}
+        <div className="d-flex align-items-center mb-1">
+          <h5 className="fw-bold mb-0 me-2">₹{product.price}</h5>
+          <span className="text-muted text-decoration-line-through">₹{product.mrp}</span>
+          <span className="text-success ms-2 fw-semibold">{product.discountPercent}% OFF</span>
+        </div>
 
-          {product.weight && (
-            <p className="text-center m-1">
-              <strong>Weight:</strong> {product.weight}
-            </p>
-          )}
+        <p className="text-secondary" style={{ fontSize: "13px" }}>{product.perUnitPrice}</p>
 
-          <p className="text-center m-1">
-            <strong>MRP:</strong>{" "}
-            <span className="text-decoration-line-through text-muted">
-              ₹{product.mrp}
-            </span>
-          </p>
-          <p className="text-center m-1">
-            <strong>Price:</strong>{" "}
-            <span className="text-success fw-bold">₹{product.price}</span>{" "}
-            <span className="text-danger">
-              ({product.discountPercent}% OFF)
-            </span>
-          </p>
-
-          <p className="text-center m-1">
-            <strong>Per Unit Price:</strong> {product.perUnitPrice}
-          </p>
-          <p className="text-center m-1">
-            <strong>Delivery:</strong> {product.deliveryTime}
-          </p>
-
-          {product.rating && (
-            <p className="text-center m-1">
-              <strong>Rating:</strong> ⭐ {product.rating} / 5 (
-              {product.ratingCount} reviews)
-            </p>
-          )}
-
-          <div className="d-flex justify-content-center">
-            <button className="btn btn-light border border 1 border-success mt-2">
-              Add to Cart
-            </button>
+        {/* Add GSTIN / Brand Info */}
+        <div className="border-top border-bottom py-2 my-2">
+          <div className="d-flex justify-content-between">
+            <span className="text-muted">Brand</span>
+            <strong>{product.brand}</strong>
           </div>
         </div>
+
+        {/* Description */}
+        <p className="mb-2" style={{ fontSize: "13.5px" }}>
+          {product.description}
+        </p>
+
+        {/* Add to Cart Button */}
+        <button className="btn btn-success w-100 fw-bold py-2">Add to cart</button>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+ import { Link } from "react-router-dom";                
 
 export default function SplitScrollLayout() {
   const [cardSize, setCardSize] = useState({ height: 220, imageHeight: 100 });
