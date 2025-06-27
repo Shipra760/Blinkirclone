@@ -1,18 +1,18 @@
 const allItems = [
  {
     id: 1,
-    img: "/.jpeg",
-    title: "Noise ColorFit Icon 2 LCD Display HD Smart Watch (1.8'', Jet Black)",
+    img: "/rice.jpeg",
+    title: "Best Quality Wheat",
     weight: "1 unit",
-    mrp: 5999,
-    price: 1399,
+    mrp: 799,
+    price: 399,
     discountPercent: 76,
     perUnitPrice: "Inclusive of all taxes",
     deliveryTime: "8 MINS",
     rating: 4.3,
     ratingCount: 802,
-    brand: "Noise",
-    description: "High-resolution display, multiple sports modes, long battery life.",
+    brand: "Atta",
+    description: "Whole wheat flour, soft and nutritious, ideal for chapatis",
     
   },
   {

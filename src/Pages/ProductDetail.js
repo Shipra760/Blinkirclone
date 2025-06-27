@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-import allItems from "../data/productList"
-
+import allItems from "../data/productList";
 
 export default function ProductDetails() {
   const { id } = useParams();
   const product = allItems.find((item) => item.id === parseInt(id));
+
+  const [qty, setQty] = useState(0); // ← Track quantity
+
+  const handleAdd = () => setQty(1);
+  const handleIncrement = () => setQty(qty + 1);
+  const handleDecrement = () => {
+    if (qty <= 1) setQty(0);
+    else setQty(qty - 1);
+  };
 
   if (!product) return <div>Product not found.</div>;
 
@@ -41,7 +49,7 @@ export default function ProductDetails() {
 
         <p className="text-secondary" style={{ fontSize: "13px" }}>{product.perUnitPrice}</p>
 
-        {/* Add GSTIN / Brand Info */}
+        {/* Brand Info */}
         <div className="border-top border-bottom py-2 my-2">
           <div className="d-flex justify-content-between">
             <span className="text-muted">Brand</span>
@@ -54,8 +62,33 @@ export default function ProductDetails() {
           {product.description}
         </p>
 
-        {/* Add to Cart Button */}
-        <button className="btn btn-success w-100 fw-bold py-2">Add to cart</button>
+        {/* 🔥 Add/Remove Button Section */}
+        <div className="d-grid mt-3">
+          {qty === 0 ? (
+            <button
+              className="btn btn-success fw-bold py-2"
+              onClick={handleAdd}
+            >
+              Add to cart
+            </button>
+          ) : (
+            <div className="d-flex justify-content-center align-items-center border rounded px-3 py-2">
+              <button
+                onClick={handleDecrement}
+                className="btn btn-outline-danger btn-sm fw-bold px-3"
+              >
+                –
+              </button>
+              <span className="mx-3 fw-bold">{qty}</span>
+              <button
+                onClick={handleIncrement}
+                className="btn btn-outline-success btn-sm fw-bold px-3"
+              >
+                +
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

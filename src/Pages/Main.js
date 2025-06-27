@@ -23,6 +23,10 @@ import TrendingCarousel from "../Component/TrendingCarousel";
 import ElectronicPara from "../Component/ElectronicPara"
 import BannerElectronic from "../Component/BannerElectronic"
 import BannerBeauty from "../Component/BannerBeauty";
+import SlickDecor from "../Component/SlickDecor"
+import DecorCaraousel from "../Component/DecorCaraousel"
+import SlickKid from "../Component/SlickKid";
+import KidTwoBanner from "../Component/KidTwoBanner";
 
 export default function Main() {
   return (
@@ -51,6 +55,10 @@ export default function Main() {
       <ElectronicPara />
       <BannerElectronic />
       <BannerBeauty />
+      <SlickDecor />
+      <DecorCaraousel />
+      <SlickKid />
+      <KidTwoBanner />
       <Footer />
     </>
   );

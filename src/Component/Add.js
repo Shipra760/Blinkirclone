@@ -6,9 +6,9 @@ export default function Add() {
   const items = [
     {
       id: 1,
-      img: "/cow.jpeg",
-      title: "Cow Milk",
-      tags: ["Milk"],
+      img: "/rice.jpeg",
+      title: "Atta",
+      tags: ["Atta"],
       rating: 4.5, 
       time: "8 MINS",
       price: 288,

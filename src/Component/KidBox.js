@@ -1,16 +1,16 @@
 const items = [
-  { img: "/kid1.jpeg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/kid2.jpeg", title: "Masala,Bread", subtitle: "& egg" },
-  { img: "/kid3.jpeg", title: "Delicious", subtitle: "Cake" },
-  { img: "/kid4.jpeg", title: "Cow Milk", subtitle: "" },
-  { img: "/kid5.jpeg", title: "Spicy", subtitle: "Namkin" },
-  { img: "/kid6.jpeg", title: "Chicken", subtitle: "Meat" },
-  { img: "/kid7.jpeg", title: "Maggie", subtitle: "Pasta" },
-  { img: "/kid8.jpeg", title: "Shoefix", subtitle: "" },
-  { img: "/kid9.jpeg", title: "Choco", subtitle: "Biscuit" },
-  { img: "/kid10.jpeg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/kid1.jpeg", title: "Choco", subtitle: "Chocolate" },
-  { img: "/kid2.jpeg", title: "Masala", subtitle: "& Bread" },
+  { img: "/kid1.jpeg", title: "Puzzles" },
+  { img: "/kid2.jpeg", title: "Coloring" },
+  { img: "/kid3.jpeg", title: "Stationery" },
+  { img: "/kid4.jpeg", title: "Crayons" },
+  { img: "/kid5.jpeg", title: "Rattles" },
+  { img: "/kid6.jpeg", title: "Teether" },
+  { img: "/kid7.jpeg", title: "Blocks" },
+  { img: "/kid8.jpeg", title: "Softtoys" },
+  { img: "/kid9.jpeg", title: "Snacks" },
+  { img: "/kid10.jpeg", title: "Bibs" },
+  { img: "/kid1.jpeg", title: "Onesies" },
+  { img: "/kid2.jpeg", title: "Learning" },
 ];
 
 export default function KidBox() {

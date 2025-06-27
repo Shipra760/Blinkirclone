@@ -32,11 +32,13 @@ import SlickElectronic from "../Component/SlickElectronic";
 import SlickBeauty from "../Component/SlickBeauty";
 import TrendingCarousel from "../Component/TrendingCarousel";
 import ElectronicPara from "../Component/ElectronicPara";
-import BannerElectronic from "../Component/BannerElectronic"
-
+import BannerElectronic from "../Component/BannerElectronic";
+import SlickDecor from "../Component/SlickDecor"
 import BeautyCarousel from "../Component/BeautyCarousel";
 import BannerBeauty from "../Component/BannerBeauty";
-
+import DecorCaraousel from "../Component/DecorCaraousel";
+import SlickKid from "../Component/SlickKid";
+import KidTwoBanner from "../Component/KidTwoBanner";
 
 export default function CategoryPage() {
   const { categoryName } = useParams();
@@ -48,15 +50,20 @@ export default function CategoryPage() {
       <Box />
       <Slick />
       <Cart />
+      <ElectronicPara />
+      < KidTwoBanner />
       <Add1 />
       <Crousel />
       <Electronic />
       <Add2 />
       <Box2 />
       <Beauty />
+      <BannerElectronic />
       <Decor />
+      <SlickBeauty />
       <Box1 />
       <TwoBanner />
+       <BeautyCarousel />
       <Kid />
     </>
   );
@@ -68,8 +75,8 @@ export default function CategoryPage() {
         <SlickElectronic />
         <Add2 />
         <TrendingCarousel />
-         <Electronic />
-         <ElectronicPara />
+        <Electronic />
+        <ElectronicPara />
       </div>
     ),
     beauty: (
@@ -77,23 +84,24 @@ export default function CategoryPage() {
         <BannerBeauty />
         <Beauty />
         <SlickBeauty />
+        <BeautyCarousel />
         <BeautyBox />
-         <BeautyCarousel />
       </div>
     ),
     kids: (
       <div>
+        <SlickKid />
         <Kid />
         <KidCart />
-        <TwoBanner />
+        < KidTwoBanner />
         <KidBox />
-        <Crousel />
       </div>
     ),
     decor: (
       <div>
+        <SlickDecor />
         <Decor />
-        <Crousel />
+        <DecorCaraousel />
         <DecorBox />
         <TwoBanner />
       </div>

@@ -36,8 +36,8 @@ const settings = {
 
 export default function BeautyCarousel() {
   return (
-    <div className="container  ">
-      <h5 className="fw-bold ms-2 " style={{fontSize:"15px"}}>Trending Now</h5>
+    <div className="container p-3">
+      <h5 className="fw-bold " style={{fontSize:"15px"}}>Trending Now</h5>
       <Slider {...settings}>
         {trendingItems.map((item) => (
           <div key={item.id} className="">

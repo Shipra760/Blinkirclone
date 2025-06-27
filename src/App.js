@@ -5,9 +5,12 @@ import ElectronicDetail from "./Pages/ElectronicDetails";
 import CrouselOpen from "./Component/CrouselOpen";
 import CategoryPage from "./Pages/CategoryPage";
 import TrendOpen from "./Component/TrendOpen";
-import BeautyOpen from "./Component/BeautyOpen"
+import BeautyOpen from "./Component/BeautyOpen";
 import Login from "./Component/Login";
-import Wallet from "./Component/Wallet"
+import Wallet from "./Component/Wallet";
+import DecorOpen from "./Component/DecorOpen";
+import AddMoney from "./Component/AddMoney";
+import KidOpen from "./Component/KidOpen"
 
 export default function App() {
   return (
@@ -16,11 +19,14 @@ export default function App() {
         <Route path="/" element={<Main />} />
         <Route path="/details/:id" element={<ProductDetail />} />
         <Route path="/details/:id" element={<ElectronicDetail />} />{" "}
-       <Route path="/trendopen/:id" element={<TrendOpen />} />
-       <Route path="/beautyopen/:id" element={<BeautyOpen />} />
+        <Route path="/trendopen/:id" element={<TrendOpen />} />
+        <Route path="/beautyopen/:id" element={<BeautyOpen />} />
+        <Route path="/decoropen/:id" element={<DecorOpen />} />
+        <Route path="/kidopen" element={<KidOpen />} />
         <Route path="/open" element={<CrouselOpen />} />
         <Route path="/login" element={<Login />} />
         <Route path="/wallet" element={<Wallet />} />
+        <Route path="/add-money" element={<AddMoney />} />
         <Route path="/category/:categoryName" element={<CategoryPage />} />
       </Routes>
     </BrowserRouter>

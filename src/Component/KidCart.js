@@ -29,8 +29,8 @@ export default function KidCart() {
               </p>
               
                <a
-                  href="/open" 
-                  className="btn btn-dark mt-5"
+                  href="/kidopen" 
+                  className="btn btn-light text-dark mt-5"
                 >
                   Order Now
                 </a>

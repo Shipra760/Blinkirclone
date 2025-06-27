@@ -1,16 +1,16 @@
 const items = [
-  { img: "/decor1.jpeg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/decor2.jpeg", title: "Masala,Bread", subtitle: "& egg" },
-  { img: "/decor3.jpeg", title: "Delicious", subtitle: "Cake" },
-  { img: "/decor4.jpeg", title: "Cow Milk", subtitle: "" },
-  { img: "/decor5.jpeg", title: "Spicy", subtitle: "Namkin" },
-  { img: "/decor6.jpeg", title: "Chicken", subtitle: "Meat" },
-  { img: "/decor1.jpeg", title: "Maggie", subtitle: "Pasta" },
-  { img: "/decor3.jpeg", title: "Shoefix", subtitle: "" },
-  { img: "/decor2.jpeg", title: "Choco", subtitle: "Biscuit" },
-  { img: "/decor5.jpeg", title: "Dal,Oil", subtitle: "Rice" },
-  { img: "/decor2.jpeg", title: "Choco", subtitle: "Chocolate" },
-  { img: "/decor6.jpeg", title: "Masala", subtitle: "& Bread" },
+  { img: "/decor1.jpeg", title: "Wallart" },
+  { img: "/decor2.jpeg", title: "Painting" },
+  { img: "/decor3.jpeg", title: "Cushion" },
+  { img: "/decor4.jpeg", title: "Throw" },
+  { img: "/decor5.jpeg", title: "Vase"},
+  { img: "/decor6.jpeg", title: "Lamp" },
+  { img: "/decor1.jpeg", title: "Curtain" },
+  { img: "/decor3.jpeg", title: "Frame" },
+  { img: "/decor2.jpeg", title: "Doormat" },
+  { img: "/decor5.jpeg", title: "Tray" },
+  { img: "/decor2.jpeg", title: "Tapestry" },
+  { img: "/decor6.jpeg", title: "Pouffe" },
 ];
 
 export default function DecorBox() {
