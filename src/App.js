@@ -10,7 +10,11 @@ import Login from "./Component/Login";
 import Wallet from "./Component/Wallet";
 import DecorOpen from "./Component/DecorOpen";
 import AddMoney from "./Component/AddMoney";
-import KidOpen from "./Component/KidOpen"
+import KidOpen from "./Component/KidOpen";
+import PrintPage from "./Component/PrintPage";
+import Home from "./Component/Home";
+import Orders from "./Component/Orders";
+import Categories from "./Component/Categories";
 
 export default function App() {
   return (
@@ -26,7 +30,11 @@ export default function App() {
         <Route path="/open" element={<CrouselOpen />} />
         <Route path="/login" element={<Login />} />
         <Route path="/wallet" element={<Wallet />} />
+        <Route path="/print" element={<PrintPage />} />
         <Route path="/add-money" element={<AddMoney />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/categories" element={<Categories />} />
         <Route path="/category/:categoryName" element={<CategoryPage />} />
       </Routes>
     </BrowserRouter>
