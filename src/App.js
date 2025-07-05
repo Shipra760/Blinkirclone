@@ -15,6 +15,18 @@ import PrintPage from "./Component/PrintPage";
 import Home from "./Component/Home";
 import Orders from "./Component/Orders";
 import Categories from "./Component/Categories";
+import Order from "./Component/Order";
+import Recipes from "./Component/Recipes";
+import Book from "./Component/Book";
+import Gift from "./Component/Gift";
+import Gst from "./Component/Gst";
+import Wal from "./Component/Wal";
+import Money from "./Component/Money";
+import Payment from "./Component/Payment";
+import Reward from "./Component/Reward";
+import Pay from "./Component/Pay";
+import Support from "./Component/Support";
+import Blinkitmoney from "./Component/Blinkitmoney";
 
 export default function App() {
   return (
@@ -36,6 +48,18 @@ export default function App() {
         <Route path="/orders" element={<Orders />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/category/:categoryName" element={<CategoryPage />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/recipes" element={<Recipes />} />
+        <Route path="/book" element={<Book />} />
+        <Route path="/gift" element={<Gift />} />
+        <Route path="/gst" element={<Gst />} />
+        <Route path="/wal" element={<Wal />} />
+        <Route path="/money" element={<Money />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/reward" element={<Reward />} />
+         <Route path="/blinkit-money" element={<Blinkitmoney />} />
+          <Route path="/support" element={<Support />} />
+           <Route path="/payments" element={<Pay />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function KidTwoBanner() {
   return (
     <div className="container my-4">

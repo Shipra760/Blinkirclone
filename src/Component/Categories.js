@@ -8,18 +8,16 @@ import DecorBox from "./DecorBox";
 import Box from "./Box";
 import Category from "./Category";
 
-
 export default function categories() {
   return (
     <div>
       <Header />
-       <Category />
+      <Category />
       <Box />
       <KidBox />
       <DecorBox />
       <MobileFooter />
       <Footer />
-     
     </div>
   );
 }

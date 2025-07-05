@@ -7,12 +7,10 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
 
-  // Redirect to login page
   const handleUserClick = () => {
     navigate("/login");
   };
 
-  // ✅ New: Redirect to wallet page
   const handleWalletClick = () => {
     navigate("/wallet");
   };
@@ -28,9 +26,12 @@ export default function Header() {
   return (
     <div
       className="w-100 border-bottom text-dark"
-      style={{ backgroundColor: "lightyellow", position: "relative", zIndex: 1 }}
+      style={{
+        backgroundColor: "lightyellow",
+        position: "relative",
+        zIndex: 1,
+      }}
     >
-      {/* Mobile View */}
       <div className="d-block d-md-none px-3">
         <div
           className={`d-flex justify-content-between align-items-center mb-2 transition ${
@@ -45,7 +46,6 @@ export default function Header() {
             </div>
           </div>
           <div className="d-flex gap-3">
-            {/* ✅ Mobile Wallet Click */}
             <FaWallet
               size={20}
               onClick={handleWalletClick}
@@ -85,7 +85,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Desktop View */}
       <div className="row align-items-center px-4 gx-3 d-none d-md-flex bg-white text-dark m-0">
         <div className="col-md-4 d-flex align-items-center">
           <img
@@ -118,7 +117,6 @@ export default function Header() {
         </div>
 
         <div className="col-md-3 d-flex justify-content-end align-items-center">
-          {/* ✅ Desktop Wallet Click */}
           <FaWallet
             className="me-3"
             onClick={handleWalletClick}

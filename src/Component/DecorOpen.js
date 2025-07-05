@@ -161,7 +161,6 @@ export default function SplitScrollLayout() {
 
   return (
     <div className="container-fluid px-2" style={{ overflowX: "hidden" }}>
-      {/* TOP NAVBAR SECTION */}
       <div
         className="d-flex align-items-center justify-content-between sticky-top px-2"
         style={{
@@ -178,7 +177,6 @@ export default function SplitScrollLayout() {
         <BiSearch size={20} />
       </div>
 
-      {/* SPLIT SCROLL LAYOUT */}
       <div
         className="d-flex"
         style={{
@@ -187,7 +185,6 @@ export default function SplitScrollLayout() {
           borderRadius: "8px",
         }}
       >
-        {/* LEFT CATEGORY LIST */}
         <div
           style={{
             width: "90px",
@@ -229,7 +226,6 @@ export default function SplitScrollLayout() {
           ))}
         </div>
 
-        {/* RIGHT SCROLLABLE CONTENT */}
         <div
           style={{
             flex: 1,
@@ -238,7 +234,6 @@ export default function SplitScrollLayout() {
             backgroundColor: "#f9f9f9",
           }}
         >
-          {/* FILTER BUTTONS ROW */}
           <div
             className="d-flex py-2 overflow-auto "
             style={{
@@ -273,7 +268,6 @@ export default function SplitScrollLayout() {
             </button>
           </div>
 
-          {/* ✅ Product Grid */}
           <div className="product-grid px-2 py-2">
             {items.map((item, idx) => (
               <div

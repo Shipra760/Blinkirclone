@@ -1,5 +1,3 @@
-import React from "react";
-
 const items = [
   { img: "/grocery.jpg", title: "Dal,Oil", subtitle: "Rice" },
   { img: "/gro3.jpg", title: "Masala,Bread", subtitle: "& egg" },

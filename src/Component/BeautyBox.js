@@ -1,5 +1,3 @@
-import React from "react";
-
 const items = [
   { img: "/lip.jpeg", title: "Lipstick", subtitle: "" },
   { img: "/multy.jpeg", title: "Brush", subtitle: "" },

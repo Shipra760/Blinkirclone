@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 
@@ -96,7 +95,6 @@ export default function Add2() {
                 minHeight: "240px",
               }}
             >
-              {/* Image */}
               <div className="p-1">
                 <img
                   src={item.img}
@@ -111,9 +109,7 @@ export default function Add2() {
                 />
               </div>
 
-              {/* Product Info */}
               <div className="px-2" style={{ fontSize: "11px" }}>
-                {/* Tags */}
                 <div
                   className="d-flex align-items-center mb-1"
                   style={{
@@ -139,7 +135,6 @@ export default function Add2() {
                   ))}
                 </div>
 
-                {/* Title */}
                 <div
                   className="fw-medium mb-1"
                   style={{
@@ -152,7 +147,6 @@ export default function Add2() {
                   {item.title}
                 </div>
 
-                {/* Ratings & Time */}
                 <div
                   className="d-flex align-items-center gap-1 mb-1 text-muted"
                   style={{ fontSize: "10px" }}
@@ -165,7 +159,6 @@ export default function Add2() {
                   <span className="ms-auto">⏱ {item.time}</span>
                 </div>
 
-                {/* Discount */}
                 <div
                   className="text-success mb-1 fw-semibold"
                   style={{ fontSize: "10.5px" }}
@@ -173,7 +166,6 @@ export default function Add2() {
                   {item.discountPercent}% OFF
                 </div>
 
-                {/* Price + MRP */}
                 <div className="fw-bold" style={{ fontSize: "12px" }}>
                   ₹{item.price}{" "}
                   <span
@@ -184,7 +176,6 @@ export default function Add2() {
                   </span>
                 </div>
 
-                {/* Per Unit */}
                 {item.perUnit && (
                   <div
                     className="text-secondary mb-1"
@@ -195,7 +186,6 @@ export default function Add2() {
                 )}
               </div>
 
-              {/* ADD + See More (Bottom Aligned) */}
               <div className="px-2 pb-2 mt-auto">
                 <div className="d-grid">
                   <Link

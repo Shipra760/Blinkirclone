@@ -9,7 +9,7 @@ export default function Add() {
       img: "/decor1.jpeg",
       title: "Design Dreams Come True",
       tags: ["Design Dreams Come True"],
-      rating: 4.5, 
+      rating: 4.5,
       time: "8 MINS",
       price: 288,
       mrp: 330,
@@ -40,7 +40,7 @@ export default function Add() {
       discountPercent: 14,
       perUnit: "₹81/100 g",
     },
-     {
+    {
       id: 16,
       img: "/decor4.jpeg",
       title: "Elevating home decor game",
@@ -52,7 +52,7 @@ export default function Add() {
       discountPercent: 14,
       perUnit: "₹81/100 g",
     },
-     {
+    {
       id: 17,
       img: "/decor5.jpeg",
       title: "Living the stylish life",
@@ -64,7 +64,7 @@ export default function Add() {
       discountPercent: 14,
       perUnit: "₹81/100 g",
     },
-     {
+    {
       id: 18,
       img: "/decor6.jpeg",
       title: "Decor Edition",
@@ -92,11 +92,10 @@ export default function Add() {
                 borderRadius: "10px",
                 overflow: "hidden",
                 boxShadow: "0 0 6px rgba(0,0,0,0.05)",
-                height: "100%", // fills col height
-                minHeight: "240px", // make all cards same height
+                height: "100%",
+                minHeight: "240px",
               }}
             >
-              {/* Image */}
               <div className="p-1">
                 <img
                   src={item.img}
@@ -111,36 +110,32 @@ export default function Add() {
                 />
               </div>
 
-              {/* Product Info */}
               <div className="px-2" style={{ fontSize: "11px" }}>
-                {/* Tags */}
                 <div
-  className="d-flex align-items-center mb-1"
-  style={{
-    height: "20px",
-    whiteSpace: "nowrap",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-  }}
->
-  {item.tags.map((tag, i) => (
-    <span
-      key={i}
-      className="badge bg-light text-dark border me-1 "
-      style={{
-        fontSize: "10px",
-        padding: "2px 6px",
-        lineHeight: "normal",
-        flexShrink: 0,
-      }}
-    >
-      {tag}
-    </span>
-  ))}
-</div>
+                  className="d-flex align-items-center mb-1"
+                  style={{
+                    height: "20px",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  {item.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="badge bg-light text-dark border me-1 "
+                      style={{
+                        fontSize: "10px",
+                        padding: "2px 6px",
+                        lineHeight: "normal",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
 
-
-                {/* Title */}
                 <div
                   className="fw-medium mb-1"
                   style={{
@@ -153,7 +148,6 @@ export default function Add() {
                   {item.title}
                 </div>
 
-                {/* Ratings & Time */}
                 <div
                   className="d-flex align-items-center gap-1 mb-1 text-muted"
                   style={{ fontSize: "10px" }}
@@ -162,11 +156,10 @@ export default function Add() {
                     <FaStar style={{ fontSize: "9px", marginRight: "2px" }} />
                     {item.rating}
                   </span>
-                  
+
                   <span className="ms-auto">⏱ {item.time}</span>
                 </div>
 
-                {/* Discount */}
                 <div
                   className="text-success mb-1 fw-semibold"
                   style={{ fontSize: "10.5px" }}
@@ -174,7 +167,6 @@ export default function Add() {
                   {item.discountPercent}% OFF
                 </div>
 
-                {/* Price + MRP */}
                 <div className="fw-bold" style={{ fontSize: "12px" }}>
                   ₹{item.price}{" "}
                   <span
@@ -185,7 +177,6 @@ export default function Add() {
                   </span>
                 </div>
 
-                {/* Per Unit */}
                 {item.perUnit && (
                   <div
                     className="text-secondary mb-1"
@@ -196,7 +187,6 @@ export default function Add() {
                 )}
               </div>
 
-              {/* ADD + See More (Bottom Aligned) */}
               <div className="px-2 pb-2 mt-auto">
                 <div className="d-grid">
                   <Link

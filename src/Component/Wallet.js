@@ -1,6 +1,4 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-// import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 
 export default function Wallet() {
@@ -8,7 +6,6 @@ export default function Wallet() {
 
   return (
     <div style={{ backgroundColor: "#fff7e6", minHeight: "100vh" }}>
-      {/* Header */}
       <div className="d-flex justify-content-between align-items-center px-3 py-2">
         <button onClick={() => navigate(-1)} className="btn btn-light border-0">
           ←
@@ -16,14 +13,12 @@ export default function Wallet() {
         <FiSettings size={22} />
       </div>
 
-      {/* Logo & Title */}
       <div className="text-center my-2">
         <img src="/blinkit.png" alt="Blinkit Money" style={{ width: 80 }} />
         <h4 className="fw-bold mt-2 mb-0">blinkit</h4>
         <h2 className="fw-bold">MONEY</h2>
       </div>
 
-      {/* Feature Cards */}
       <div className="px-3">
         <div className="bg-white p-3 rounded shadow-sm mb-3">
           <div className="d-flex">
@@ -73,7 +68,6 @@ export default function Wallet() {
           </div>
         </div>
 
-        {/* Add Money Button */}
         <div className="text-center">
           <button
             className="btn btn-success w-100  py-2 fw-bold"
@@ -84,7 +78,6 @@ export default function Wallet() {
         </div>
       </div>
 
-      {/* Footer Message */}
       <div className="text-center mt-5 text-muted fw-semibold">
         Enjoy seamless one tap payments
       </div>

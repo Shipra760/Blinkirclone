@@ -8,14 +8,14 @@ export default function MobileFooter() {
 
   const tabs = [
     { name: "Home", icon: <FaHome size={24} />, route: "/" },
-     { name: "Order Again", icon: <FaRedoAlt size={24} />, route: "/orders" },
+    { name: "Order Again", icon: <FaRedoAlt size={24} />, route: "/orders" },
     { name: "Categories", icon: <FaThLarge size={24} />, route: "/categories" },
     { name: "Print", icon: <FaPrint size={24} />, route: "/print" },
   ];
 
   const handleTabClick = (tab) => {
     setActiveTab(tab.name);
-    navigate(tab.route); 
+    navigate(tab.route);
   };
 
   return (

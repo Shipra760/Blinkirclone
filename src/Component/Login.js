@@ -1,42 +1,64 @@
-import React from "react";
-import { FaBirthdayCake, FaWallet } from "react-icons/fa";
-import { MdOutlineSupport, MdPayments } from "react-icons/md";
-import { BsSun } from "react-icons/bs";
+import {
+  FaBirthdayCake,
+  FaWallet,
+  FaBookOpen,
+  FaAddressBook,
+  FaGift,
+} from "react-icons/fa";
+import {
+  MdOutlineSupport,
+  MdPayments,
+  MdAssignment,
+  MdBookmark,
+  MdPrivacyTip,
+} from "react-icons/md";
+import { BsSun, BsCartCheck, BsShare } from "react-icons/bs";
 import { BiRightArrowAlt } from "react-icons/bi";
+import { AiOutlineBell, AiOutlineLogout } from "react-icons/ai";
+import { RiReceiptLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const infoItems = [
-    "Your orders",
-    "Bookmarked recipes",
-    "Address book",
-    "GST details",
-    "E-Gift Cards",
-    "Your Prescriptions",
+    { text: "Your orders", icon: <BsCartCheck size={20} />, link: "/order" },
+    {
+      text: "Bookmarked recipes",
+      icon: <MdBookmark size={20} />,
+      link: "/recipes",
+    },
+    { text: "Address book", icon: <FaAddressBook size={20} />, link: "/book" },
+    { text: "GST details", icon: <MdAssignment size={20} />, link: "/gst" },
+    { text: "E-Gift Cards", icon: <FaGift size={20} />, link: "/gift" },
   ];
 
   const paymentItems = [
-    "Wallet",
-    "Blinkit Money",
-    "Payment settings",
-    "Your collected rewards",
+    { text: "Wallet", icon: <FaWallet size={20} />, link: "/wal" },
+    { text: "Blinkit Money", icon: <FaWallet size={20} />, link: "/money" },
+    {
+      text: "Payment settings",
+      icon: <MdPayments size={20} />,
+      link: "/payment",
+    },
+    {
+      text: "Your collected rewards",
+      icon: <FaGift size={20} />,
+      link: "/reward",
+    },
   ];
 
   const otherInform = [
-    "Share the app",
-    "About us",
-    "Get Feeding India receipt",
-    "Account privacy",
-    "Notification preferences",
-    "Log out",
+    { text: "Share the app", icon: <BsShare size={20} /> },
+    { text: "About us", icon: <FaBookOpen size={20} /> },
+    { text: "Get Feeding India receipt", icon: <RiReceiptLine size={20} /> },
+    { text: "Account privacy", icon: <MdPrivacyTip size={20} /> },
+    { text: "Notification preferences", icon: <AiOutlineBell size={20} /> },
+    { text: "Log out", icon: <AiOutlineLogout size={20} /> },
   ];
 
   return (
-    <div
-      className="container py-3"
-      style={{ backgroundColor: "#fff", minHeight: "100vh" }}
-    >
+    <div className="container py-3 bg-white" style={{ minHeight: "100vh" }}>
       {/* Header */}
-      <div className="d-flex align-items-center mb-3">
+      <div className="d-flex align-items-center mb-4">
         <button className="btn btn-link text-dark p-0 me-2">
           <i className="bi bi-arrow-left"></i>
         </button>
@@ -44,12 +66,12 @@ const Profile = () => {
       </div>
 
       {/* Account Info */}
-      <div>
+      <div className="mb-4">
         <h4 className="fw-bold">Your account</h4>
-        <p className="text-muted">📞 6306616775</p>
+        <p className="text-muted mb-2">📞 6306616775</p>
 
-        <div className="bg-warning-subtle rounded p-2 d-flex align-items-center mb-3">
-          <FaBirthdayCake size={20} className="me-2 text-warning" />
+        <div className="bg-warning-subtle rounded d-flex align-items-center px-3 py-2 mb-4">
+          <FaBirthdayCake size={22} className="me-2 text-warning" />
           <span className="fw-medium">Add your birthday</span>
           <span
             className="ms-auto text-success fw-semibold"
@@ -60,75 +82,129 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* Top Buttons */}
-      <div className="d-flex justify-content-between text-center mb-3">
-        <div className="flex-fill mx-1 p-2 border rounded">
+      {/* 3 Cards */}
+      <div className="d-flex justify-content-between text-center mb-4 gap-2">
+        <Link
+          to="/blinkit-money"
+          className="flex-fill p-3 border rounded text-decoration-none text-dark"
+        >
           <FaWallet size={20} className="mb-1" />
           <div className="small">Blinkit Money</div>
-        </div>
-        <div className="flex-fill mx-1 p-2 border rounded">
+        </Link>
+
+        <Link
+          to="/support"
+          className="flex-fill p-3 border rounded text-decoration-none text-dark"
+        >
           <MdOutlineSupport size={20} className="mb-1" />
           <div className="small">Support</div>
-        </div>
-        <div className="flex-fill mx-1 p-2 border rounded">
+        </Link>
+
+        <Link
+          to="/payments"
+          className="flex-fill p-3 border rounded text-decoration-none text-dark"
+        >
           <MdPayments size={20} className="mb-1" />
           <div className="small">Payments</div>
-        </div>
+        </Link>
       </div>
 
       {/* Appearance */}
-      <div className="d-flex align-items-center justify-content-between border rounded p-2 mb-4">
+      <div className="d-flex align-items-center justify-content-between border rounded px-3 py-2 mb-4">
         <div className="d-flex align-items-center" style={{ fontSize: "14px" }}>
           <BsSun className="me-2" />
           <span>Appearance</span>
         </div>
-        <span className="badge bg-info ">LIGHT</span>
+        <span className="badge bg-info">LIGHT</span>
       </div>
 
-      {/* Information Section */}
-      <h6 className="text-muted" style={{ fontSize: "14px" }}>
-        YOUR INFORMATION
-      </h6>
-      {infoItems.map((item, i) => (
-        <div
-          key={i}
-          className="d-flex justify-content-between py-2 border-bottom "
-          style={{ fontSize: "13px", fontWeight: "400" }}
-        >
-          <span>{item}</span>
-          <BiRightArrowAlt size={20} />
-        </div>
-      ))}
+      {/* Sections */}
+      <div className="mb-4">
+        <h6 className="text-muted mb-2" style={{ fontSize: "14px" }}>
+          YOUR INFORMATION
+        </h6>
+        {infoItems.map((item, i) =>
+          item.link ? (
+            <Link
+              key={i}
+              to={item.link}
+              className="text-decoration-none text-dark"
+            >
+              <div className="d-flex justify-content-between align-items-center py-3 border-bottom">
+                <div className="d-flex align-items-center gap-2">
+                  {item.icon}
+                  <span>{item.text}</span>
+                </div>
+              </div>
+            </Link>
+          ) : (
+            <div
+              key={i}
+              className="d-flex justify-content-between align-items-center py-3 border-bottom"
+            >
+              <div className="d-flex align-items-center gap-2">
+                {item.icon}
+                <span>{item.text}</span>
+              </div>
+            </div>
+          )
+        )}
+      </div>
 
-      {/* Payment Section */}
-      <h6 className="text-muted mt-4" style={{ fontSize: "14px" }}>
-        PAYMENTS AND COUPONS
-      </h6>
-      {paymentItems.map((item, i) => (
-        <div
-          key={i}
-          className="d-flex justify-content-between py-2 border-bottom"
-          style={{ fontSize: "13px", fontWeight: "400" }}
-        >
-          <span>{item}</span>
-          <BiRightArrowAlt size={20} />
-        </div>
-      ))}
+      <div className="mb-4">
+        <h6 className="text-muted mb-2" style={{ fontSize: "14px" }}>
+          PAYMENTS AND COUPONS
+        </h6>
+        {paymentItems.map((item, i) =>
+          item.link ? (
+            <a
+              key={i}
+              href={item.link}
+              className="text-decoration-none text-dark"
+              style={{ display: "block", fontSize: "15px" }}
+            >
+              <div className="d-flex justify-content-between align-items-center py-3 border-bottom">
+                <div className="d-flex align-items-center gap-2">
+                  {item.icon}
+                  <span>{item.text}</span>
+                </div>
+                <BiRightArrowAlt size={18} />
+              </div>
+            </a>
+          ) : (
+            <div
+              key={i}
+              className="d-flex justify-content-between align-items-center py-3 border-bottom"
+              style={{ fontSize: "15px" }}
+            >
+              <div className="d-flex align-items-center gap-2">
+                {item.icon}
+                <span>{item.text}</span>
+              </div>
+              <BiRightArrowAlt size={18} />
+            </div>
+          )
+        )}
+      </div>
 
-      {/* Payment Section */}
-      <h6 className="text-muted mt-4" style={{ fontSize: "14px" }}>
-        OTHER INFORMATION
-      </h6>
-      {otherInform.map((item, i) => (
-        <div
-          key={i}
-          className="d-flex justify-content-between py-2 border-bottom"
-          style={{ fontSize: "13px", fontWeight: "400" }}
-        >
-          <span>{item}</span>
-          <BiRightArrowAlt size={20} />
-        </div>
-      ))}
+      <div>
+        <h6 className="text-muted mb-2" style={{ fontSize: "14px" }}>
+          OTHER INFORMATION
+        </h6>
+        {otherInform.map((item, i) => (
+          <div
+            key={i}
+            className="d-flex justify-content-between align-items-center py-3 border-bottom"
+            style={{ fontSize: "15px" }}
+          >
+            <div className="d-flex align-items-center gap-2">
+              {item.icon}
+              <span>{item.text}</span>
+            </div>
+            <BiRightArrowAlt size={18} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

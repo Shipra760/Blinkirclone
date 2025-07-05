@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 
@@ -9,7 +8,7 @@ export default function Add1() {
       img: "/cow.jpeg",
       title: "Cow Milk",
       tags: ["Milk"],
-      rating: 4.5, 
+      rating: 4.5,
       time: "8 MINS",
       price: 288,
       mrp: 330,
@@ -40,7 +39,7 @@ export default function Add1() {
       discountPercent: 14,
       perUnit: "₹81/100 g",
     },
-     {
+    {
       id: 4,
       img: "/namkin.jpeg",
       title: "Masala spicy namkin",
@@ -52,7 +51,7 @@ export default function Add1() {
       discountPercent: 14,
       perUnit: "₹81/100 g",
     },
-     {
+    {
       id: 5,
       img: "/cake.jpeg",
       title: "Very Delicious Cake",
@@ -64,7 +63,7 @@ export default function Add1() {
       discountPercent: 14,
       perUnit: "₹81/100 g",
     },
-     {
+    {
       id: 6,
       img: "/biscuit.jpeg",
       title: "Crunchy Biscuit",
@@ -92,11 +91,10 @@ export default function Add1() {
                 borderRadius: "10px",
                 overflow: "hidden",
                 boxShadow: "0 0 6px rgba(0,0,0,0.05)",
-                height: "100%", // fills col height
-                minHeight: "240px", // make all cards same height
+                height: "100%",
+                minHeight: "240px",
               }}
             >
-              {/* Image */}
               <div className="p-1">
                 <img
                   src={item.img}
@@ -110,37 +108,32 @@ export default function Add1() {
                   }}
                 />
               </div>
-
-              {/* Product Info */}
               <div className="px-2" style={{ fontSize: "11px" }}>
-                {/* Tags */}
                 <div
-  className="d-flex align-items-center mb-1"
-  style={{
-    height: "20px",
-    whiteSpace: "nowrap",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-  }}
->
-  {item.tags.map((tag, i) => (
-    <span
-      key={i}
-      className="badge bg-light text-dark border me-1 "
-      style={{
-        fontSize: "10px",
-        padding: "2px 6px",
-        lineHeight: "normal",
-        flexShrink: 0,
-      }}
-    >
-      {tag}
-    </span>
-  ))}
-</div>
+                  className="d-flex align-items-center mb-1"
+                  style={{
+                    height: "20px",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  {item.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="badge bg-light text-dark border me-1 "
+                      style={{
+                        fontSize: "10px",
+                        padding: "2px 6px",
+                        lineHeight: "normal",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
 
-
-                {/* Title */}
                 <div
                   className="fw-medium mb-1"
                   style={{
@@ -153,7 +146,6 @@ export default function Add1() {
                   {item.title}
                 </div>
 
-                {/* Ratings & Time */}
                 <div
                   className="d-flex align-items-center gap-1 mb-1 text-muted"
                   style={{ fontSize: "10px" }}
@@ -162,11 +154,10 @@ export default function Add1() {
                     <FaStar style={{ fontSize: "9px", marginRight: "2px" }} />
                     {item.rating}
                   </span>
-                  
+
                   <span className="ms-auto">⏱ {item.time}</span>
                 </div>
 
-                {/* Discount */}
                 <div
                   className="text-success mb-1 fw-semibold"
                   style={{ fontSize: "10.5px" }}
@@ -174,7 +165,6 @@ export default function Add1() {
                   {item.discountPercent}% OFF
                 </div>
 
-                {/* Price + MRP */}
                 <div className="fw-bold" style={{ fontSize: "12px" }}>
                   ₹{item.price}{" "}
                   <span
@@ -185,7 +175,6 @@ export default function Add1() {
                   </span>
                 </div>
 
-                {/* Per Unit */}
                 {item.perUnit && (
                   <div
                     className="text-secondary mb-1"
@@ -196,7 +185,6 @@ export default function Add1() {
                 )}
               </div>
 
-              {/* ADD + See More (Bottom Aligned) */}
               <div className="px-2 pb-2 mt-auto">
                 <div className="d-grid">
                   <Link

@@ -4,8 +4,13 @@ import { BiSearch } from "react-icons/bi";
 
 export default function PrintPage() {
   return (
-    <div style={{ background: "#fffdf4", minHeight: "100vh", paddingBottom: "80px" }}>
-      {/* Header Section */}
+    <div
+      style={{
+        background: "#fffdf4",
+        minHeight: "100vh",
+        paddingBottom: "80px",
+      }}
+    >
       <div style={{ background: "#ffe79a", padding: "12px 16px" }}>
         <div style={{ fontSize: "14px", color: "#444" }}>Prints in</div>
         <div style={{ fontSize: "24px", fontWeight: "bold" }}>13 minutes</div>
@@ -14,7 +19,6 @@ export default function PrintPage() {
         </div>
       </div>
 
-      {/* Search Bar */}
       <div style={{ padding: "10px 16px" }}>
         <div
           style={{
@@ -41,7 +45,6 @@ export default function PrintPage() {
         </div>
       </div>
 
-      {/* Print Store Title */}
       <div style={{ textAlign: "center", padding: "16px 0" }}>
         <h3 style={{ margin: 0 }}>Print Store</h3>
         <div style={{ color: "#555" }}>
@@ -49,7 +52,6 @@ export default function PrintPage() {
         </div>
       </div>
 
-      {/* Document Upload Box */}
       <div
         style={{
           margin: "0 16px 20px",
@@ -80,7 +82,6 @@ export default function PrintPage() {
         </button>
       </div>
 
-      {/* Last Minute Needs */}
       <div style={{ margin: "0 16px" }}>
         <h5 style={{ fontWeight: "bold", marginBottom: "16px" }}>
           Print your Last Minute Needs
@@ -127,10 +128,20 @@ export default function PrintPage() {
             </div>
             <div style={{ fontSize: "14px", marginTop: "4px" }}>
               <span style={{ color: "green", fontWeight: "bold" }}>₹30</span>
-              <span style={{ textDecoration: "line-through", color: "#999", marginLeft: "6px" }}>
+              <span
+                style={{
+                  textDecoration: "line-through",
+                  color: "#999",
+                  marginLeft: "6px",
+                }}
+              >
                 ₹95
               </span>{" "}
-              <span style={{ color: "green", fontSize: "13px", marginLeft: "4px" }}>68% OFF</span>
+              <span
+                style={{ color: "green", fontSize: "13px", marginLeft: "4px" }}
+              >
+                68% OFF
+              </span>
             </div>
           </div>
         </div>

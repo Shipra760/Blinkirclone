@@ -18,16 +18,7 @@ const data = [
     title: "Headsets",
     images: ["/elec4.jpeg", "/elec3.jpeg"],
   },
-//   {
-//     title: "Headphones",
-//     images: ["/elec5.jpeg", "/elec2.jpeg"],
-//   },
-//   {
-//     title: "Extension Cables",
-//     images: ["/elec6.jpeg", "/elec1.jpeg"],
-//   },
-];
-
+]
 export default function ElectronicPara() {
   return (
     <div className="container my-4">

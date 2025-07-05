@@ -65,7 +65,9 @@ export default function SlickElectronic() {
 
   return (
     <div className="container p-3">
-      <h5 className="fw-bold " style={{fontSize:"15px"}}>Featured this week</h5>
+      <h5 className="fw-bold " style={{ fontSize: "15px" }}>
+        Featured this week
+      </h5>
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index} className="px-2">
@@ -78,15 +80,13 @@ export default function SlickElectronic() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height: 100,
-                // width:"40px",
+
                 position: "relative",
               }}
             >
-              {/* Label (Top Center) */}
               <div
                 style={{
                   position: "absolute",
-                  // top: 10,
                   left: "50%",
                   transform: "translateX(-50%)",
                   backgroundColor: "white",
@@ -100,7 +100,6 @@ export default function SlickElectronic() {
                 {item.label}
               </div>
 
-              {/* Title */}
               <div
                 style={{
                   position: "absolute",
@@ -108,9 +107,8 @@ export default function SlickElectronic() {
                   left: 0,
                   right: 0,
                   textAlign: "center",
-                  backgroundColor:"white",
+                  backgroundColor: "white",
                   color: "black",
-                  // fontWeight: "bold",
                   fontSize: "10px",
                   textShadow: "1px 1px 3px rgba(0,0,0,0.6)",
                 }}

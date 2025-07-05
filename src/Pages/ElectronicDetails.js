@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-
 export default function ElectronicDetails() {
   const { id } = useParams();
   const product = product.find((item) => item.id === parseInt(id));
