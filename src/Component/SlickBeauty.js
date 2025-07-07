@@ -41,13 +41,12 @@ export default function SlickBeauty() {
     { img: "/perfume.webp" },
     { img: "/multy.jpeg" },
     { img: "/brush.jpeg" },
-     { img: "/lip.jpeg" },
+    { img: "/lip.jpeg" },
     { img: "/makeup.jpeg" },
     { img: "/powder.jpeg" },
     { img: "/perfume.webp" },
     { img: "/multy.jpeg" },
     { img: "/brush.jpeg" },
-    
   ];
 
   const settings = {

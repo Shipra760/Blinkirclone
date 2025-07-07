@@ -36,8 +36,7 @@ export default function Payment() {
   return (
     <div style={{ maxWidth: "500px", margin: "20px auto", padding: "15px" }}>
       <h4 className="" style={{fontSize:"16px"}}>Payment Settings</h4>
-
-      {/* Cards */}
+      
       <div style={sectionStyle}>
         <h6>Cards</h6>
         <div style={itemStyle}>
@@ -57,7 +56,6 @@ export default function Payment() {
         </div>
       </div>
 
-      {/* UPI */}
       <div style={sectionStyle}>
         <h6>UPI</h6>
         <div style={itemStyle}>
@@ -87,7 +85,6 @@ export default function Payment() {
         </div>
       </div>
 
-      {/* Wallets */}
       <div style={sectionStyle}>
         <h6>Wallets</h6>
         <div style={itemStyle}>
@@ -109,7 +106,6 @@ export default function Payment() {
         </div>
       </div>
 
-      {/* Pay Later */}
       <div style={sectionStyle}>
         <h6>Pay Later</h6>
         <div style={itemStyle}>

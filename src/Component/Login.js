@@ -47,17 +47,28 @@ const Profile = () => {
   ];
 
   const otherInform = [
-    { text: "Share the app", icon: <BsShare size={20} /> },
-    { text: "About us", icon: <FaBookOpen size={20} /> },
-    { text: "Get Feeding India receipt", icon: <RiReceiptLine size={20} /> },
-    { text: "Account privacy", icon: <MdPrivacyTip size={20} /> },
-    { text: "Notification preferences", icon: <AiOutlineBell size={20} /> },
-    { text: "Log out", icon: <AiOutlineLogout size={20} /> },
+    { text: "Share the app", icon: <BsShare size={20} />, link: "/share" },
+    { text: "About us", icon: <FaBookOpen size={20} />, link: "/about" },
+    {
+      text: "Get Feeding India receipt",
+      icon: <RiReceiptLine size={20} />,
+      link: "feeding",
+    },
+    {
+      text: "Account privacy",
+      icon: <MdPrivacyTip size={20} />,
+      link: "account",
+    },
+    {
+      text: "Notification preferences",
+      icon: <AiOutlineBell size={20} />,
+      link: "notification",
+    },
+    { text: "Log out", icon: <AiOutlineLogout size={20} />, link: "logout" },
   ];
 
   return (
     <div className="container py-3 bg-white" style={{ minHeight: "100vh" }}>
-      {/* Header */}
       <div className="d-flex align-items-center mb-4">
         <button className="btn btn-link text-dark p-0 me-2">
           <i className="bi bi-arrow-left"></i>
@@ -65,10 +76,9 @@ const Profile = () => {
         <h5 className="mb-0 fw-semibold">Profile</h5>
       </div>
 
-      {/* Account Info */}
       <div className="mb-4">
         <h4 className="fw-bold">Your account</h4>
-        <p className="text-muted mb-2">📞 6306616775</p>
+        <p className="text-muted mb-2">📞6306616775</p>
 
         <div className="bg-warning-subtle rounded d-flex align-items-center px-3 py-2 mb-4">
           <FaBirthdayCake size={22} className="me-2 text-warning" />
@@ -77,12 +87,16 @@ const Profile = () => {
             className="ms-auto text-success fw-semibold"
             style={{ cursor: "pointer" }}
           >
-            Enter details <BiRightArrowAlt />
+            <Link
+              to="/enter-details"
+              className="text-success fw-semibold text-decoration-none"
+            >
+              Enter details <BiRightArrowAlt />
+            </Link>
           </span>
         </div>
       </div>
 
-      {/* 3 Cards */}
       <div className="d-flex justify-content-between text-center mb-4 gap-2">
         <Link
           to="/blinkit-money"
@@ -109,7 +123,6 @@ const Profile = () => {
         </Link>
       </div>
 
-      {/* Appearance */}
       <div className="d-flex align-items-center justify-content-between border rounded px-3 py-2 mb-4">
         <div className="d-flex align-items-center" style={{ fontSize: "14px" }}>
           <BsSun className="me-2" />
@@ -118,7 +131,6 @@ const Profile = () => {
         <span className="badge bg-info">LIGHT</span>
       </div>
 
-      {/* Sections */}
       <div className="mb-4">
         <h6 className="text-muted mb-2" style={{ fontSize: "14px" }}>
           YOUR INFORMATION
@@ -192,17 +204,24 @@ const Profile = () => {
           OTHER INFORMATION
         </h6>
         {otherInform.map((item, i) => (
-          <div
+          <a
             key={i}
-            className="d-flex justify-content-between align-items-center py-3 border-bottom"
-            style={{ fontSize: "15px" }}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-decoration-none text-dark"
           >
-            <div className="d-flex align-items-center gap-2">
-              {item.icon}
-              <span>{item.text}</span>
+            <div
+              className="d-flex justify-content-between align-items-center py-3 border-bottom"
+              style={{ fontSize: "15px" }}
+            >
+              <div className="d-flex align-items-center gap-2">
+                {item.icon}
+                <span>{item.text}</span>
+              </div>
+              <BiRightArrowAlt size={18} />
             </div>
-            <BiRightArrowAlt size={18} />
-          </div>
+          </a>
         ))}
       </div>
     </div>

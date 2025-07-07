@@ -27,6 +27,13 @@ import Reward from "./Component/Reward";
 import Pay from "./Component/Pay";
 import Support from "./Component/Support";
 import Blinkitmoney from "./Component/Blinkitmoney";
+import Share from "./Component/Share";
+import Account from "./Component/Account";
+import About from "./Component/About";
+import Feeding from "./Component/Feeding";
+import Notification from "./Component/Notification";
+import Logout from "./Component/Logout";
+import Enterdetail from "./Component/Enterdetail"
 
 export default function App() {
   return (
@@ -57,9 +64,16 @@ export default function App() {
         <Route path="/money" element={<Money />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/reward" element={<Reward />} />
-         <Route path="/blinkit-money" element={<Blinkitmoney />} />
-          <Route path="/support" element={<Support />} />
-           <Route path="/payments" element={<Pay />} />
+        <Route path="/blinkit-money" element={<Blinkitmoney />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/payments" element={<Pay />} />
+        <Route path="/share" element={<Share />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/feeding" element={<Feeding />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/logout" element={<Logout/>} />
+        <Route path="/enter-details" element={<Enterdetail />} />
       </Routes>
     </BrowserRouter>
   );

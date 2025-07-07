@@ -326,33 +326,33 @@ export default function SplitScrollLayout() {
 
         <h5>Top Brands for Electronic Gadgets</h5>
         <p>
-          <strong>Samsung</strong> – Innovative smartphones and smart devices.
+          <strong>Samsung</strong> - Innovative smartphones and smart devices.
         </p>
         <p>
-          <strong>Boat</strong> – Stylish and affordable audio accessories.
+          <strong>Boat</strong> - Stylish and affordable audio accessories.
         </p>
         <p>
-          <strong>Realme</strong> – Performance-packed gadgets at great prices.
+          <strong>Realme</strong> - Performance-packed gadgets at great prices.
         </p>
         <p>
-          <strong>Sony</strong> – Premium quality headphones and sound systems.
+          <strong>Sony</strong> - Premium quality headphones and sound systems.
         </p>
 
         <h4>Why Buy Electronics Online from Us?</h4>
         <p>
-          <strong>Wide Selection</strong> – Thousands of gadgets from top
+          <strong>Wide Selection</strong> - Thousands of gadgets from top
           brands.
         </p>
         <p>
-          <strong>Fast Delivery</strong> – Get your gadgets at your doorstep in
+          <strong>Fast Delivery</strong> - Get your gadgets at your doorstep in
           minutes.
         </p>
         <p>
-          <strong>Genuine Products</strong> – 100% original and warranty-covered
+          <strong>Genuine Products</strong> - 100% original and warranty-covered
           items.
         </p>
         <p>
-          <strong>Affordable Prices</strong> – Daily deals, discounts, and combo
+          <strong>Affordable Prices</strong> - Daily deals, discounts, and combo
           offers.
         </p>
 
@@ -383,7 +383,7 @@ export default function SplitScrollLayout() {
 
         <h5>5. Do you provide warranty on electronics?</h5>
         <p>
-          Yes, all gadgets come with a manufacturer’s warranty and service
+          Yes, all gadgets come with a manufacturer's warranty and service
           support.
         </p>
 
