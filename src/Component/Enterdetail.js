@@ -31,7 +31,7 @@ export default function Enterdetail() {
 
       <h2 style={{ margin: 0 }}>Add your birthday!</h2>
       <p style={{ fontSize: "0.9rem", color: "#555" }}>
-        and we’ll remember you every year 🎉
+        and we'll remember you every year 🎉
       </p>
 
       <input
@@ -65,7 +65,7 @@ export default function Enterdetail() {
       />
 
       <p style={{ fontSize: "0.75rem", color: "#777" }}>
-        Once saved, date of birth can’t be changed!
+        Once saved, date of birth can't be changed!
       </p>
 
       <button
