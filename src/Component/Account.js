@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowLeft, FaTrash } from "react-icons/fa";
 import { BiChevronRight } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default function Account() {
   return (
@@ -12,14 +13,11 @@ export default function Account() {
       <div className="content">
         <h2>Account privacy and policy</h2>
         <p>
-          We i.e. "Blink Commerce Private Limited" (formerly known as Grofers
-          India Private Limited) (“Company”), are committed to protecting the
-          privacy and security of your personal information. Your privacy is
-          important to us and maintaining your trust is paramount.
+          We i.e. "Blink Commerce Private Limited" (formerly known as Grofers India Private Limited) (“Company”), are committed to protecting the privacy and security of your personal information.
         </p>
-        <a href="#" className="read-more">
+        <Link to="/privacy-policy" className="read-more">
           Read more <span>▼</span>
-        </a>
+        </Link>
       </div>
 
       <div className="delete-card">
